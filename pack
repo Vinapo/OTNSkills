@@ -1,0 +1,24 @@
+#!/bin/bash
+rm -r packages
+rm packages.zip
+pip install -r requirements.txt --target ./packages
+if [ -d packages ]; then
+	cd packages
+    mkdir data
+	cp ../*.py .
+	cp ../data/* data
+	cp ../production.ini .
+	find . -name "tests.py" -delete
+	find . -name "*.pyc" -delete
+	find . -name "*.egg-info" | xargs rm -rf
+	find . -name "*.dist-info" | xargs rm -rf
+	zip -9mrv packages.zip .
+	mv packages.zip ..
+	cd ..
+	rm -rf packages
+fi
+
+aws lambda update-function-code  --function-name otnskills  --zip-file fileb://packages.zip
+
+rm -rf ./packages.zip
+

@@ -34,6 +34,27 @@ class QueryAPI(graphene.ObjectType):
             )
         )
 
+    pricing = graphene.Field(CarPricing,
+                           series=graphene.String(default_value=''),
+                           trim=graphene.String(default_value=''),
+                           )
+
+    def resolve_pricing(self, info, series, trim):
+        print(series, trim)
+        if series == 'cx-5':
+            return CarPricing(
+                trim='Mazda CX-5',
+                price=12345,
+                rolling_price=12346,
+            )
+        else:
+            return CarPricing(
+                trim='Macan',
+                price=22345,
+                rolling_price=22346,
+            )
+
+
 
 class GraphQLManager(object):
     def __init__(self):

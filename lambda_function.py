@@ -10,7 +10,10 @@ import time
 from skills import GraphQLManager
 
 
-client_secret = 'JdqCSvYC96Bz7jGS0NGABNTxEasx0IuI'
+client_secrets = {
+    'nr1ylkb0jcy4pb': 'JdqCSvYC96Bz7jGS0NGABNTxEasx0IuI',
+    'mj9zmlpqxh92tz': 'uLzFZXW0sqOUTiOxDVfycrR9CZ62MTt6',
+}
 
 
 graphql_manager = GraphQLManager()
@@ -18,18 +21,22 @@ graphql_manager = GraphQLManager()
 
 def get_invocation(data, token, pass_token):
 
+    invocation = json.loads(b64decode(data))
+    client_secret = client_secrets.get(invocation.get('invocation_id'))
+
     secret_key = hashlib.new('sha256', client_secret).digest()
     hash = hmac.new(key=secret_key,
                     msg=data,
                     digestmod=hashlib.sha256).hexdigest()
 
     if not pass_token and hash != token:
+        print('Forbidden')
         return False
 
-    invocation = json.loads(b64decode(data))
     expired_in = invocation.get('expired_in')
 
     if expired_in < time.time():
+        print('Expired')
         return False
 
     return invocation

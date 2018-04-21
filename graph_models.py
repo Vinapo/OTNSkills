@@ -79,3 +79,10 @@ class Model(graphene.ObjectType):
     series = graphene.Field(lambda : Series)
     avatar = graphene.Field(lambda : Image)
     images = graphene.List(lambda : Image)
+
+
+class CarPricing(graphene.ObjectType):
+    trim = graphene.String()
+    series = graphene.Field(lambda : Series)
+    price = graphene.Float()
+    rolling_price = graphene.Float()

@@ -9,6 +9,14 @@
     ],
     "revenue": "202,86 tỷ USD",
     "net_income": "13,93 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 7843423,
+        "rank": 1,
+        "year_over_year": "+5%"
+      }
+    ],
     "description": "Toyota Motor Corporation (トヨタ自動車株式会社 Toyota Jidosha Kabushiki-gaisha?) là một công ty đa quốc gia có trụ sở tại Nhật Bản, và là nhà sản xuất ô tô lớn nhất thế giới vào năm 2015[3]. Về mặt công nhận quốc tế, hãng Toyota là nhà sản xuất xe hơi duy nhất có mặt trong nhóm top 10 xếp hạng công nhận tên BrandZ.",
     "owner": [
       ["Japan Trustee Services Bank", 9.7],
@@ -23,7 +31,7 @@
     ],
     "subsidiaries": 545,
     "website": "http://www.toyota-global.com/",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Toyota_carlogo.svg/500px-Toyota_carlogo.svg.png",
+    "logo": "https://www.otonhanh.vn/logo-makers/toyota.png",
     "image": {
       "url": "http://s3-us-west-1.amazonaws.com/planoprofilewebsite/wp-content/uploads/2017/10/25160927/Toyota_10Aug_17_003-XL.jpg",
       "description": "Trụ sở của Toyota Bắc Mỹ"
@@ -32,14 +40,22 @@
   {
     "brand": "Honda",
     "name": "Honda Motor Company, Ltd.",
-    "native_name": " 本田技研工業株式会社",
+    "native_name": "本田技研工業株式会社",
     "found": 1948,
     "founder": [
       "Soichiro Honda",
       "Takeo Fujisawa"
     ],
     "revenue": "139,99 tỷ USD",
-    "net_income": "3.28 tỷ USD",
+    "net_income": "3,28 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 4967689,
+        "rank": 4,
+        "year_over_year": "+7%"
+      }
+    ],
     "description": "Honda (Tiếng Nhật: 本田, Hán-Việt: \"Bản Điền\", phát âm như \"Hon-đa\" hay \"Hôn-đa\") là nhà sản xuất động cơ lớn nhất thế giới có trụ sở tại Tokyo, Nhật Bản, với số lượng hơn 14 triệu chiếc mỗi năm. Từ năm 2004 hãng bắt đầu chế tạo động cơ chạy diesel vừa êm vừa không cần bộ lọc nhằm đáp ứng tiêu chuẩn ô nhiễm. Tuy nhiên, có thể nói rằng, nền tảng tạo nên sự hành công của công ty này là từ làm xe máy.",
     "owner": [
       ["Japan Trustee Services Bank", 6.46],
@@ -55,7 +71,7 @@
     ],
     "subsidiaries": 21,
     "website": "http://world.honda.com/",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Honda-logo.svg/230px-Honda-logo.svg.png",
+    "logo": "https://www.otonhanh.vn/logo-makers/honda.png",
     "image": {
       "url": "http://www.equitypandit.com/wp-content/uploads/2016/11/Honda.jpg",
       "description": "Trụ sở chính của Honda tại thành phố Tokyo, Nhật Bản"
@@ -64,13 +80,21 @@
   {
     "brand": "Audi",
     "name": "Audi AG",
-    "native_name": " Audi",
+    "native_name": "Audi",
     "found": 1909,
     "founder": [
       "August Horch"
     ],
     "revenue": "72,47 tỷ USD",
     "net_income": "5,33 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1847613,
+        "rank": 13,
+        "year_over_year": "+1%"
+      }
+    ],
     "description": "AUDI AG là một công ty của Đức chuyên sản xuất ô tô hạng sang dưới nhãn hiệu Audi. Audi có trụ sở chính đặt tại Ingolstadt, Đức và là một công ty con của tập đoàn ô tô lớn nhất thế giới Volkswagen AG (sở hữu 99.55% cổ phần) từ năm 1964. Tập đoàn Volkswagen tái sử dụng cái tên Audi sau khi Audi trở thành một phần của tập đoàn.",
     "owner": [
       ["Volkswagen Group", 99.55]
@@ -119,7 +143,15 @@
       "Karl Rapp"
     ],
     "revenue": "116,81 tỷ USD",
-    "net_income": "8.57 tỷ USD",
+    "net_income": "8,57 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 2030331,
+        "rank": 12,
+        "year_over_year": "+5%"
+      }
+    ],
     "description": "BMW (Bayerische Motoren Werke AG - Công xưởng cơ khí Bayern) là một công ty sản xuất xe hơi và xe máy quan trọng của Đức. Thương hiệu ôtô của BMW nổi tiếng thế giới bởi sự sang trọng, thiết kế thể thao, khả năng vận hành cao.",
     "owner": [
       ["Stefan Quandt", 29],
@@ -140,7 +172,7 @@
   },
   {
     "brand": "Chevrolet",
-    "name": " Chevrolet Division of General Motors Company",
+    "name": "Chevrolet Division of General Motors Company",
     "native_name": "Chevrolet",
     "found": 1911,
     "founder": [
@@ -149,6 +181,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 3857388,
+        "rank": 7,
+        "year_over_year": "0%"
+      }
+    ],
     "description": "Chevrolet ( /ʃɛvrəˈleɪ/ shev-rə-LAY-'), thường được gọi là Chevy, có tên đầy đủ là Chevrolet Division of General Motors Company, là một bộ phận chuyên sản xuất ô tô tại Mỹ của công ty Mỹ General Motors (GM). ",
     "owner": [
       ["General Motors Company", 100]
@@ -171,8 +211,16 @@
     "founder": [
       "Henry Ford"
     ],
-    "revenue": "151.8 tỷ USD",
-    "net_income": "4.596 tỷ USD",
+    "revenue": "156,8 tỷ USD",
+    "net_income": "7,6 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 5953122,
+        "rank": 3,
+        "year_over_year": "-2%"
+      }
+    ],
     "description": "Công ty Ford Motor là một công ty đa quốc gia Hoa Kỳ và là nhà xản suất xe ôtô lớn hàng thứ 5 trên thế giới[6] theo số lượng xe bán ra toàn cầu, theo sau Toyota, General Motors, Volkswagen và Hyundai-Kia. Có trụ sở tại Dearborn, Michigan, ngoại ô Detroit.",
     "owner": [
       ["Ford Family", 2]
@@ -198,8 +246,16 @@
     "founder": [
       "Chung Ju-yung"
     ],
-    "revenue": "87.09 tỷ USD",
-    "net_income": "5.32 tỷ USD",
+    "revenue": "87,09 tỷ USD",
+    "net_income": "5,32 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 3951176,
+        "rank": 6,
+        "year_over_year": "-9%"
+      }
+    ],
     "description": "Công ty Ô tô Hyundai (tiếng Hàn: 현대 자동차 (Hyeondae jadongcha), Hanja: 現代 自動車 (\"Hiện đại Tự động xa\"); tiếng Anh: Hyundai Motor Company) là một công ty thuộc Tập đoàn Ô tô Hyundai KIA và là công ty sản xuất ô tô lớn nhất của Hàn Quốc.",
     "owner": [
       ["Hyundai Motor Group", 100]
@@ -225,6 +281,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 246492,
+        "rank": "",
+        "year_over_year": "+7%"
+      }
+    ],
     "description": "Infiniti là nhãn xe hạng sang của Nissan. Infiniti chính thức bắt đầu bán xe vào ngày 8 thnags 11 năm 1989 tại Bắc Mỹ. Hiện nay hệ thống đại lý của Infiniti đã có mặt tại hơn 50 quốc gia trên thế giới.",
     "owner": [
       ["Nissan", 100]
@@ -248,6 +312,14 @@
     ],
     "revenue": "18,57 tỷ USD",
     "net_income": "890 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 616350,
+        "rank": "",
+        "year_over_year": "-8%"
+      }
+    ],
     "description": "Isuzu Motors Ltd. là một công ty sản xuất ô tô của Nhật Bản, trụ sở chính ở Tokyo. Năm 2005, Isuzu trở thành hãng lớn nhất thế giới sản xuất các dòng xe tải từ trung bình đến hạng nặng.",
     "owner": [
     ],
@@ -270,6 +342,14 @@
     ],
     "revenue": "46,9 tỷ USD",
     "net_income": "3,8 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 2511293,
+        "rank": 10,
+        "year_over_year": "-10%"
+      }
+    ],
     "description": "Tập đoàn KIA (KIΛ) có trụ sở chính tại Seoul, là công ty sản xuất ô tô lớn thứ 2 tại Hàn Quốc sau Hyundai với doanh thu hơn 2.7 triệu chiếc năm 2012 và gần 2.75 triệu xe năm 2013. Đây là công ty thuộc sở hữu của Tập đoàn Hyundai nắm giữ tới 33.88% cổ phần.",
     "owner": [
     ["Hyundai Motor Group", 33.88]
@@ -280,7 +360,7 @@
     "website": "http://www.kia.com/",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/KIA_logo2.svg/225px-KIA_logo2.svg.png",
     "image": {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/20170801_BEAT360.jpg/220px-20170801_BEAT360.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/20170801_BEAT360.jpg/1024px-20170801_BEAT360.jpg",
       "description": "Trụ sở chính của Kia tại thành phố Seoul, Hàn Quốc"
     }
   },
@@ -294,6 +374,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 637000,
+        "rank": "",
+        "year_over_year": "-6%"
+      }
+    ],
     "description": "Lexus là phân khúc xe hạng sang của nhà sản xuất ô tô Nhật Bản Toyota. Được giới thiệu lần đầu tiên tại Hoa Kỳ năm 1989, Lexus đã nhanh chóng trở thành thương hiệu xe hơi hạng sang bán chạy nhất tại đây, tới năm 2006 Lexus đã có mặt tại 68 quốc gia và vùng lãnh thổ trên thế giới.",
     "owner": [
       ["Toyota", 100]
@@ -305,8 +393,8 @@
     "website": "https://www.lexus-int.com/top-stories",
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Lexus_division_emblem.svg/225px-Lexus_division_emblem.svg.png",
     "image": {
-      "url": "https://i2.wp.com/www.architravel.com/architravel_wp/wp-content/uploads/2016/05/Midland-Square_1.jpg?fit=749%2C1000",
-      "description": "Trụ sở chính của Lexus tại thành phố Nagoya, Nhật Bản"
+      "url": "http://linhlexus.com/wp-content/uploads/2016/12/Lexus-Thang-Long.jpg",
+      "description": "Showroom Lexus Thăng Long tại Hà Nội"
     }
   },
   {
@@ -319,6 +407,14 @@
     ],
     "revenue": "32,33 tỷ USD",
     "net_income": "130 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1495557,
+        "rank": 16,
+        "year_over_year": "+3%"
+      }
+    ],
     "description": "Mazda Motors Corporation (Phiên âm: Ma-zư-đa hoặc Ma-tsư-đa, tiếng Nhật: マツダ株式会社 / Matsuda Kabushiki Gaisha) là công ty đa quốc gia sản xuất xe hơi của Nhật Bản, có trụ sở tại Fuchū, Quận Aki, Hiroshima, Nhật Bản. Năm 2015, Mazda là nhà sản xuất ô tô lớn thứ 15 trên toàn thế giới.",
     "owner": [
       ["Japan Trustee Services Bank", 6.3],
@@ -345,7 +441,15 @@
     "Gottlieb Daimler"
     ],
     "revenue": "117,89 tỷ USD",
-    "net_income": "",
+    "net_income": "13,6 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 2534181,
+        "rank": 9,
+        "year_over_year": "+13%"
+      }
+    ],
     "description": "Mercedes-Benz là một trong những hãng sản xuất xe ô tô, xe buýt, xe tải danh tiếng trên thế giới. Hãng được xem là hãng sản xuất xe hơi lâu đời nhất còn tồn tại đến ngày nay. Khởi đầu, hãng thuộc sở hữu bởi Daimler-Benz. Hiện tại, hãng là một thành viên của công ty mẹ, Daimler AG (tên trước đây là DaimlerChrysler AG).",
     "owner": [
       ["Daimler AG", 100]
@@ -371,6 +475,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 371881,
+        "rank": "",
+        "year_over_year": "+3%"
+      }
+    ],
     "description": "Mini là thương hiệu ô tô cỡ nhỏ, được sản xuất bởi Tập đoàn ô tô Anh Quốc (British Motor Corporation - BMC) và hiện nay thuộc quyền sở hữu của tập đoàn BMW. Mini từng được xem là một biểu tượng của nước Anh vào những năm 1960.",
     "owner": [
       ["BMW", 100]
@@ -395,7 +507,15 @@
     ],
     "revenue": "18,06 tỷ USD",
     "net_income": "-1,88 tỷ USD",
-    "description": "Mini là thương hiệu ô tô cỡ nhỏ, được sản xuất bởi Tập đoàn ô tô Anh Quốc (British Motor Corporation - BMC) và hiện nay thuộc quyền sở hữu của tập đoàn BMW. Mini từng được xem là một biểu tượng của nước Anh vào những năm 1960.",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 103686,
+        "rank": "",
+        "year_over_year": "+8%"
+      }
+    ],
+    "description": "Tập đoàn Mitsubishi Motors (Japanese 自動 車 工業 株式会社) là nhà sản xuất ô tô đa quốc gia của Nhật Bản có trụ sở tại Minato, Tokyo, Nhật Bản. Năm 2011, Mitsubishi Motors là nhà sản xuất ô tô lớn thứ sáu của Nhật Bản và là nhà sản xuất lớn thứ 16 trên thế giới về sản xuất. Từ tháng 10 năm 2016 trở đi, Mitsubishi là một phần ba (34%) thuộc sở hữu của Nissan, và do đó là một phần của Liên minh Renault-Nissan-Mitsubishi.",
     "owner": [
       ["Nissan Motor Co., Ltd.", 34],
       ["Mitsubishi", 20]
@@ -425,6 +545,14 @@
     ],
     "revenue": "107,77 tỷ USD",
     "net_income": "4,33 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 4834694,
+        "rank": 5,
+        "year_over_year": "+5%"
+      }
+    ],
     "description": "Công ty Cổ phần Ô tô Nissan (日産自動車株式会社, Nissan Jidōsha Kabushiki-gaisha) là một nhà sản xuất ô tô của Nhật Bản và là một trong những nhà sản xuất ô tô lớn nhất thế giới.",
     "owner": [
     ],
@@ -452,6 +580,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1590300,
+        "rank": 14,
+        "year_over_year": "0%"
+      }
+    ],
     "description": "Lịch sử của Peugeot trải dài trên chặng đường hơn 200 năm, xuất phát từ một thị trấn ở Pháp - Sochaux, nơi mà dòng họ Peugeot bắt đầu thực hiện những sáng tạo của mình. Bản tính sáng tạo này sau đó đã dẫn đường để họ lập nên một trong những nhãn hiệu ô tô nổi tiếng nhất thế giới. Ngày nay, Peugeot có văn phòng và nhà máy sản xuất trên toàn thế giới.",
     "owner": [
       ["Groupe PSA", 100]
@@ -479,6 +615,14 @@
     ],
     "revenue": "26,82 tỷ USD",
     "net_income": "2,91 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 246375,
+        "rank": "",
+        "year_over_year": "+4%"
+      }
+    ],
     "description": "Porsche AG, thường được gọi tắt là Porsche, là một công ty sản xuất ô tô thể thao hạng sang của Đức, sáng lập bởi Louise Piëch và Ferdinand Porsche. Porsche có trụ sở chính đặt tại Stuttgart, Đức. Porsche từ năm 2009 là công ty ô tô con thuộc tập đoàn ô tô số một thế giới Volkswagen AG.",
     "owner": [
       ["Volkswagen Group", 100]
@@ -504,6 +648,14 @@
     ],
     "revenue": "31,5 tỷ USD",
     "net_income": "2,67 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1050390,
+        "rank": 21,
+        "year_over_year": "+5%"
+      }
+    ],
     "description": "Subaru ( /ˈsuːbəruː/ hoặc /sᵿbˈɑːruː/; phát âm tiếng Nhật: [sɯ.ba.ɾɯ]) là bộ phận sản xuất ô tô của tập đoàn vận tải Fuji Heavy Industries (FHI), hãng sản xuất ô tô lớn thứ hai mươi hai trên toàn thế giới tính theo sản lượng vào năm 2012.",
     "owner": [
       ["Subaru Corporation", 100]
@@ -529,6 +681,14 @@
     ],
     "revenue": "26,27 tỷ USD",
     "net_income": "819 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 2891415,
+        "rank": 8,
+        "year_over_year": "+11%"
+      }
+    ],
     "description": "Công ty Mô tô Suzuki (スズキ株式会社 Suzuki Kabushikigaisha) là một công ty đa quốc gia của Nhật chuyên sản xuất các loại xe hơi (đặc biệt là Keicar và xe thể thao nhỏ), xe máy, xe địa hình, thuyền máy, xe lăn, và các loại sản phẩm động cơ. Suzuki có 15 nhà máy sản xuất ô tô ở 14 nước và 133 nhà phân phối ở 119 nước.",
     "owner": [
     ],
@@ -553,6 +713,14 @@
     ],
     "revenue": "131,55 tỷ USD",
     "net_income": "2,33 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 6639250,
+        "rank": 2,
+        "year_over_year": "+3%"
+      }
+    ],
     "description": "Volkswagen (viết tắt là VW) là hãng sản xuất xe hơi Đức, một trong những công ty sản xuất xe hơi lớn nhất thế giới thuộc tập đoàn Volkswagen. Thị trường chủ yếu của hãng là châu Âu, những thương hiệu nổi tiếng trực thuộc hãng bao gồm Audi, Bentley, Skoda, Lamborghini, Bugatti, SEAT, Porsche và Volkswagen.",
     "owner": [
       ["Volkswagen Group", 100]
@@ -581,6 +749,14 @@
     ],
     "revenue": "11,76 tỷ USD",
     "net_income": "-2,24 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 101312,
+        "rank": "",
+        "year_over_year": "+33%"
+      }
+    ],
     "description": "Tesla Motors, Inc. là một công ty của Mỹ chuyên thiết kế, sản xuất và phân phối sản phẩm ô tô điện và linh kiện cho các phương tiện chạy điện. Tesla Motors lần đầu gây chú ý bằng việc ra mắt mẫu xe Tesla Roadster, chiếc xe thể thao đầu tiên chạy hoàn toàn bằng điện. Dòng xe thứ hai của công ty là mẫu Model S, một chiếc Sedan hạng sang chạy bằng năng lượng điện.",
     "owner": [
       ["Elon Musk", 20.5],
@@ -608,6 +784,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 178601,
+        "rank": "",
+        "year_over_year": "+20%"
+      }
+    ],
     "description": "Thành lập năm 1922, hãng xe Sawllow Sidecar, viết tắt là SS, phải đổi tên thành Jaguar bởi trùng với tên của lực lượng phát xít Đức. Trải qua 84 năm, Jaguar vẫn giữ triết lý sản xuất những chiếc xe đẹp nhất, mạnh mẽ, tinh khôn và hoang dã như loài báo đốm Mỹ.",
     "owner": [
       ["Jaguar Land Rover Limited (parent)", 0],
@@ -633,6 +817,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 442508,
+        "rank": "",
+        "year_over_year": "+2%"
+      }
+    ],
     "description": "Land Rover là một thương hiệu ô tô chuyên xe 2 cầu. Nó là một phần của công ty Jaguar Land Rover, công ty này lại là một công ty con của Tata Motors.",
     "owner": [
       ["Jaguar Land Rover Limited (parent)", 0],
@@ -657,6 +849,14 @@
     ],
     "revenue": "2,67 tỷ USD",
     "net_income": "99 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 143685,
+        "rank": "",
+        "year_over_year": "-8%"
+      }
+    ],
     "description": "Công ty Ô tô SsangYong (tiếng Hàn: 쌍용 자동차, Hanja: 雙龍 自動車; tiếng Anh: SsangYong Motor Company) là công ty sản xuất ô tô lớn thứ tư của Hàn Quốc. Công ty đặt trụ sở ở Chilgoe-dong, Pyeongtaek, Gyeonggi.",
     "owner": [
       ["Mahindra & Mahindra Limited", 100]
@@ -680,6 +880,14 @@
     ],
     "revenue": "22,1 tỷ USD",
     "net_income": "910 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 571577,
+        "rank": "",
+        "year_over_year": "+7%"
+      }
+    ],
     "description": "Tập đoàn Ô tô Volvo, hay còn gọi là Volvo Personvagnar AB, là một nhà sản xuất ô tô Thụy Điển, thuộc sở hữu của Tập đoàn Cổ phần Cát Lợi Chiết Giang (Zhejiang Geely Holding Group) của Trung Quốc. Tập đoàn ô tô Volvo được thành lập năm 1927, tại Gothenburg, Thụy Điển.",
     "owner": [
       ["Geely", 100]
@@ -707,6 +915,14 @@
     ],
     "revenue": "73,25 tỷ USD",
     "net_income": "6,49 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 2275227,
+        "rank": 11,
+        "year_over_year": "+7%"
+      }
+    ],
     "description": "Renault SA là một hãng sản xuất ô tô của Pháp.Liên minh với hãng xe Nissan đã giúp đưa hãng trở thành hãng xe lớn thứ tư thế giới.Trụ sở chính của Renault đặt tại Boulogne-Billancourt.",
     "owner": [
     ],
@@ -732,6 +948,14 @@
     ],
     "revenue": "4,34 tỷ USD",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 46239,
+        "rank": "",
+        "year_over_year": "+26%"
+      }
+    ],
     "description": "Maserati là nhãn hiệu xe hạng sang của Ý được thành lập vào ngày 1 tháng 12 năm 1914 tại Bologna. Khẩu hiệu của  Maserati là \"Luôn sang trọng, thể thao và phong cách trong những chiếc xe độc quyền\".",
     "owner": [
       ["Fiat Chrysler Automobiles", 100]
@@ -755,6 +979,14 @@
     ],
     "revenue": "445 triệu USD",
     "net_income": "",
+     "sales": [
+      {
+        "year": 2017,
+        "units": 46733,
+        "rank": "",
+        "year_over_year": "-11%"
+      }
+    ],
     "description": "Nhà máy ôtô Uljanovsk (tiếng Nga: Улья́новский автомоби́льный заво́д) – nhà máy ở Uljanovsk, thành lập tháng 7 năm 1941. Là nhà máy hàng đầu của Nga trong việc sản xuất ôtô: xe con UAZ, xe tải nhẹ và xe khách nhỏ.",
     "owner": [
       ["Sollers JSC", 100]
@@ -779,6 +1011,14 @@
     ],
     "revenue": "3,87 tỷ USD",
     "net_income": "497,28 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 8398,
+        "rank": "",
+        "year_over_year": "+5%"
+      }
+    ],
     "description": "Ferrari S.p.A. là một công ty sản xuất siêu xe thể thao của Ý do Enzo Ferrari sáng lập năm 1929. Với tên gọi ban đầu là Scuderia Ferrari, nhà sản xuất này chuyên tài trợ cho các tay đua và chế tạo các loại xe đua. Đến năm 1946, hãng bắt đầu sản xuất cả các mẫu xe dành cho cuộc sống hàng ngày và trở thành Ferrari S.p.A.",
     "owner": [
       ["Exor N.V.", 22.91],
@@ -805,6 +1045,14 @@
     ],
     "revenue": "730,34 triệu USD",
     "net_income": "12,59 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 3815,
+        "rank": "",
+        "year_over_year": "+10%"
+      }
+    ],
     "description": "Automobili Lamborghini S.p.A., thường gọi tắt là Lamborghini, là nhà sản xuất siêu xe thể thao cao cấp (siêu xe hơi) của Italy, có trụ sở chính và xưởng sản xuất đặt tại Sant' Agata Bolognese, gần Bologna, Italy. Hiện tại Lamborghini là công ty con thuộc tập đoàn ô tô lớn nhất thế giới Volkswagen AG của Đức.",
     "owner": [
       ["Volkswagen Group", 100]
@@ -828,6 +1076,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 17859,
+        "rank": "",
+        "year_over_year": "-56%"
+      }
+    ],
     "description": "Công ty Luxgen Motor là nhà sản xuất ô tô Đài Loan có trụ sở tại Sanyi, Miaoli, Đài Loan và là công ty con của Yulon Motor. Được thành lập vào tháng 1 năm 2009 và các loại xe của Luxugen đã được Dongfeng Yulon sản xuất tại Hangzhou, Trung Quốc từ cuối năm 2010. Các sản phẩm Luxgen chủ yếu được phát triển bởi một chi nhánh khác của Yulon là HAITEC và đã nhận được nhiều giải thưởng xuất sắc.",
     "owner": [
       ["Yulon Motor", 100]
@@ -848,6 +1104,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 71,
+        "rank": "",
+        "year_over_year": "+700%"
+      }
+    ],
     "description": "Bugatti Automobiles S.A.S. là thương hiệu xe hơi của Pháp ở Molsheim, Pháp (thuộc chủ quyền của Đức ở thời điểm thành lập). Mục đích khi mới thành lập công ty đó là sản xuất những chiếc xe đặc biệt nhất trên thế giới, bao gồm những chiếc chạy nhanh nhất. Ngày nay công ty thuộc sở hữu của tập đoàn Volkswagen, và đã đưa công ty này trở thành thương hiệu xe hơi thể thao nổi tiếng.",
     "owner": [
       ["Volkswagen Group", 100]
@@ -874,6 +1138,14 @@
     ],
     "revenue": "15 tỷ USD",
     "net_income": "1,1 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 356467,
+        "rank": "",
+        "year_over_year": "+16%"
+      }
+    ],
     "description": "Cadillac / kædɪlæk /, tên chính thức là Cadillac Motor Car Division, là một bộ phận của General Motors (GM) có trụ sở tại Hoa Kỳ chuyên kinh doanh các loại xe hạng sang trên toàn thế giới. Các thị trường chính của nó là Hoa Kỳ, Canada và Trung Quốc, nhưng các loại xe mang thương hiệu Cadillac được phân phối tại 34 thị trường khác trên toàn thế giới. Về mặt lịch sử, xe ô tô Cadillac luôn giữ vị trí hàng đầu trong lĩnh vực xa xỉ ở Hoa Kỳ.",
     "owner": [
       ["General Motors", 100]
@@ -898,6 +1170,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1465823,
+        "rank": 17,
+        "year_over_year": "-1%"
+      }
+    ],
     "description": "Buick hiện là thương hiệu ô tô lâu đời nhất của Mỹ, và một trong những thương hiệu ô tô lâu đời nhất trên thế giới. Nó có nguồn gốc từ công ty Buick Auto-Vim and Power vào năm 1899, nhà sản xuất động cơ đốt trong độc lập và động cơ xe hơi. Hiện nay, Buick là nhãn hiệu xe sang của General Motors (GM). Các dòng xe của Buick được bán tại Hoa Kỳ, Canada, México, Trung Quốc và Israel.",
     "owner": [
       ["General Motors", 100]
@@ -921,8 +1201,16 @@
       "H. M. Bentley",
       "W. O. Bentley"
     ],
-    "revenue": "2,519 tỷ USD",
+    "revenue": "2,52 tỷ USD",
     "net_income": "139 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 10566,
+        "rank": "",
+        "year_over_year": "-6%"
+      }
+    ],
     "description": "Bentley Motors Limited là nhà sản xuất ô tô hạng sang của Anh. Bentley Motors được thành lập tại Anh vào ngày 18 tháng 1 1919 bởi Walter Owen Bentley, người được biết đến với dòng sản phẩm động cơ quay cho máy bay chiến đấu trong thế chiến thứ nhất, nổi tiếng nhất là động cơ Bentley BR1 được sử dụng trong những phiên bản sau của chiếc Sopwith Camel. Từ năm 1998, tập đoàn Volkswagen của Đức đã trở thành chủ sở hữu của Bentley.",
     "owner": [
       ["Volkswagen Group", 100]
@@ -948,6 +1236,14 @@
     ],
     "revenue": "736 triệu USD",
     "net_income": "19,84 triệu USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 5117,
+        "rank": "",
+        "year_over_year": "+58%"
+      }
+    ],
     "description": "Aston Martin Lagonda Limited là một nhà sản xuất xe hơi thể thao hạng sang của Anh, có trụ sở đặt tại Gaydon, Warwickshire. Tên của công ty bắt nguồn từ tên của một trong những người sáng lập công ty, Lionel Martin, và từ tên ngọn đồi đua Aston gần Aston Clinton tại Buckinghamshire. Từ 1994 tới 2007, Aston Martin là một công ty con của hãng Ford Motor Company, trở thành một phần của công ty Premier Automotive Group vào năm 2000. Vào ngày 12 tháng 3 năm 2007, Aston Martin được mua lại bởi một công ty liên doanh với số tiền 848 triệu đô, trở thành đồng sở hữu bởi công ty Investment Dar và công ty Adeem Investment của Kuwait và doanh nhân người Anh John Sinders. Ford vẫn có 77 triệu đô la cổ phần trong công ty,ước tính giá trị hiện nay của Aston Martin vào khoảng 925 triệu đô la Mỹ,khoảng 1 tỷ đô la Mỹ.Aston Martin là một trong những công ty về ô tô hàng đầu thế giới.",
     "owner": [
     ],
@@ -972,6 +1268,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 109093,
+        "rank": "",
+        "year_over_year": "+51%"
+      }
+    ],
     "description": "Alfa Romeo Automobiles S.p.A. (phát âm tiếng Ý: [ˈalfa roˈmɛːo]) là một hãng chế tạo ô tô của Ý. Được thành lập ngày 24 tháng 6 năm 1910 tại Milan với tên gọi A.L.F.A. (Anonima Lombarda Fabbrica Automobili), công ty đã tham gia các giải đua ô tô kể từ 1911, và giành được nhiều tên tuổi trong việc sản xuất xe hơi thể thao đắt tiền.Từ 1932 đến 1986 công ty thuộc sở hữu của công ty quốc doanh Istituto per la Ricostruzione Industriale và trở thành một phần của tập đoàn Fiat và từ tháng 2 năm 2007 thuộc Fiat Group Automobiles S.p.A.",
     "owner": [
       ["Fiat Chrysler Automobiles", 100]
@@ -996,6 +1300,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1503806,
+        "rank": 15,
+        "year_over_year": "+1%"
+      }
+    ],
     "description": "FIAT (Fabbrica Italiana Automobili Torino) là một hãng ô tô của Ý, được thành lập ngày 11/07/1899 tại Torino, Ý. Hiện tại, FIAT là một công ty con của Fiat Chrysler Automobiles (FCA). Năm 1900 đánh dấu sự ra đời của nhà máy Fiat đầu tiên tại Carso Dante với 150 nhân công. Bốn năm sau, năm 1904, cả thế giới biết đến logo hình ovan màu xanh của Fiat. Trong suốt hơn một thế kỷ qua, Fiat vẫn là nhà sản xuất ô tô lớn nhất ở châu Âu và đứng thứ ba trên thế giới sau General Motors và Ford trong hơn 20 năm, cho đến khi cuộc khủng hoảng ngành công nghiệp xe hơi vào cuối những năm 1980.",
     "owner": [
       ["Fiat Chrysler Automobiles", 100]
@@ -1019,7 +1331,15 @@
       "Walter P. Chrysler"
     ],
     "revenue": "83,06 tỷ USD",
-    "net_income": "1,202 tỷ USD",
+    "net_income": "1,2 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 266943,
+        "rank": "",
+        "year_over_year": "-19%"
+      }
+    ],
     "description": "Chrysler là thương hiệu xe hơi sang trọng của Hoa Kỳ và nhãn hiệu cao cấp từ lâu của nhà sản xuất ô tô FCA US LLC. Trước khi công ty Fiat Chrysler Automobiles thành lập năm 2014 bởi Fiat S.p.A. và Chrysler, FCA US được biết đến với cái tên Chrysler Group LLC, được đặt tên theo người sáng lập Walter Chrysler. Thương hiệu Chrysler ban đầu được định vị là hãng xe sang trọng cạnh tranh với Cadillac, Packard, Cord và Lincoln. Chrysler là thương hiệu hàng đầu trong danh mục thương hiệu của Chrysler Corporation.",
     "owner": [
       ["Fiat Chrysler Automobiles", 100]
@@ -1044,6 +1364,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 999888,
+        "rank": 23,
+        "year_over_year": "-6%"
+      }
+    ],
     "description": "Citroën (phát âm tiếng Pháp: [sitʁoˈɛn]) là hãng sản xuất xe hơi Pháp. Công ty được thành lập năm 1919 do André Citroën và trở thành công ty châu Âu đầu tiên sản xuất hàng loạt xe hơi theo mô hình Ford. Từ năm 1976, nó trực thuộc PSA Peugeot Citroën và có trụ sở chính trên đường Fructidor ở Paris. Mới đầu chỉ là hãng xe sản xuất hàng loạt với những thiết kế bình thường, Citroën gây ngạc nhiên khắp thế giới năm 1934 với mô hình xe sáng kiến Traction Avant, xe dẫn động bánh trước đầu tiên được sản xuất hàng loạt.",
     "owner": [
       ["Groupe PSA", 100]
@@ -1069,6 +1397,14 @@
     ],
     "revenue": "384,2 triệu USD",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 579000,
+        "rank": "",
+        "year_over_year": "-11%"
+      }
+    ],
     "description": "Hãng xe Dodge là một thương hiệu xe ô tô của Mỹ, chuyên sản xuất xe tải nhỏ và xe thể thao đa dụng. Dodge hiện là một công ty con của FCA Mỹ LLC (trước đây gọi là Chrysler Group LLC), có trụ sở tại Auburn Hills, Michigan. Thiết kế của xe Dodge mang đậm chất Mỹ và khá giống ở nhiều dòng xe Mỹ như Ford, Chevrolet, Cadillac, GMC...mạnh mẽ, hầm hố, đầu to và ngốn xăng. Định vị của xe Dodge là dòng xe sang, nên giá xe của Dodge cũng ở mức khá là sang...và phổ giá của xe Dodge khoảng từ 20.000 USD đến hơn 90.000 USD cho các phiên bản xe mới nhất.",
     "owner": [
       ["Fiat Chrysler Automobiles NV", 100]
@@ -1093,6 +1429,14 @@
     ],
     "revenue": "14,78 tỷ USD",
     "net_income": "1,7 tỷ USD",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1245055,
+        "rank": 19,
+        "year_over_year": "+61%"
+      }
+    ],
     "description": "Geely (tên chính thức Tập đoàn ô tô Geely Chiết Giang) là một Trung Quốc công ty sản xuất ô tô đa quốc gia có trụ sở tại Hàng Châu, Chiết Giang. Geely bán xe chở khách dưới thương hiệu Geely Auto, Lotus, Lynk & Co, PROTON, Volvo, xe thương mại thuộc Công ty London EV và thương hiệu Yuan Cheng Auto. Geely đã sở hữu hãng sản xuất ô tô Volvo Cars của Thụy Điển từ năm 2010 khi hãng này mua lại Volvo từ Ford. Nó hoàn thành việc mua lại hãng sản xuất xe Anh của Anh The London Electric Vehicle Company vào năm 2013. Vào tháng 6 năm 2017, Geely cũng mua lại 49,9% cổ phần trong nhà sản xuất xe máy PROTON Holdings của Malaysia cũng như phần lớn 51% cổ phần trong nhà sản xuất ô tô thể thao Anh Lotus Cars.",
     "owner": [
     ],
@@ -1115,6 +1459,14 @@
     ],
     "revenue": "",
     "net_income": "",
+    "sales": [
+      {
+        "year": 2017,
+        "units": 1390130,
+        "rank": 18,
+        "year_over_year": "0%"
+      }
+    ],
     "description": "Jeep là một thương hiệu ôtô của Mỹ, là một bộ phận của FCA US LLC (trước đây là Chrysler Group, LLC), một chi nhánh của Fiat Chrysler Automobiles. Jeep đã từng là một phần của Chrysler từ năm 1987, khi Chrysler mua lại thương hiệu Jeep, cùng với các tài sản còn lại, từ chủ sở hữu trước đây của nó là: American Motors Corporation (AMC). Dòng sản phẩm hiện tại của Jeep bao gồm các loại xe tiện ích thể thao và xe off-road. Jeep đã bán được 1,4 triệu chiếc SUV trên toàn cầu vào năm 2016, tăng từ 500.000 vào năm 2008, 2/3 trong số đó ở Bắc Mỹ và là thương hiệu bán chạy nhất của Fiat-Chrysler ở Mỹ trong nửa đầu năm 2017. Riêng tại Mỹ, hơn 2400 đại lý giữ quyền kinh doanh để bán các loại xe có thương hiệu Jeep, và nếu Jeep được tách ra thành một công ty riêng, ước tính có giá trị từ 22 đến 33,5 tỷ đô la Mỹ - cao hơn một chút so với FCA (Mỹ).",
     "owner": [
     ],
@@ -1138,6 +1490,14 @@
     ],
     "revenue": "639 triệu USD",
     "net_income": "",
+     "sales": [
+      {
+        "year": 2017,
+        "units": 3340,
+        "rank": "",
+        "year_over_year": "+2%"
+      }
+    ],
     "description": "McLaren Automotive (trước đây gọi là McLaren Cars) là một nhà sản xuất ô tô của Anh được thành lập bởi Bruce McLaren và có trụ sở tại Woking, Surrey. McLaren chuyên sản xuất xe thể thao và xe hạng sang với số lượng giới hạn tại các cơ sở sản xuất được chỉ định. Trong tháng 7 năm 2017, McLaren Automotive đã trở thành 100% thuộc sở hữu của Tập đoàn Công nghệ McLaren. McLaren nổi tiếng với siêu xe F1, sản xuất năm 1992. McLaren F1 nhiều năm liền giữ vị trí chiếc xe nhanh nhất thế giới. Mặc dù ra đời cách đây hơn 20 năm, kiểu dáng của nó vẫn là chuẩn mực trên siêu xe ngày nay.",
     "owner": [
       ["McLaren Technology Group", 100]
@@ -1165,6 +1525,14 @@
     ],
     "revenue": "246,2 triệu USD",
     "net_income": "17 triệu USD",
+     "sales": [
+      {
+        "year": 2017,
+        "units": 3362,
+        "rank": "",
+        "year_over_year": "-16%"
+      }
+    ],
     "description": "Rolls-Royce Motor Cars là hãng sản xuất xe hơi siêu sang có trụ sở và nhà máy ở Goodwood tại West Sussex, Anh. Nhà máy này nằm trong khu công nghiệp lịch sử Goodwood Circuit ở Goodwood, West Sussex, Anh. Rolls-Royce Motor Cars trở thành chi nhánh sở hữu 100% bởi hãng ô tô Đức BMW và hiện tại là nhà sản xuất các thương hiệu xe hạng sang Rolls-Royce. Xe Rolls-Royce không có đối thủ trong phân khúc siêu sang, đối thủ của những chiếc xe này là phi thuyền và chuyên cơ.",
     "owner": [
       ["BMW Group", 100]
@@ -1212,6 +1580,14 @@
     ],
     "revenue": "",
     "net_income": "",
+     "sales": [
+      {
+        "year": 2017,
+        "units": 40,
+        "rank": "",
+        "year_over_year": "+29%"
+      }
+    ],
     "description": "Pagani là một trong những thương hiệu siêu xe hàng đầu thế giới. Cùng với Bugatti và Koenigsegg, Pagani chuyên sản xuất những chiếc siêu xế triệu đô mà ngay cả những “đại gia” thực sự cũng chưa chắc đã có thể sở hữu vì số lượng sản xuất hết sức hạn chế của nó (chừng vài chục chiếc mỗi năm). Với số lượng nhân viên chỉ khoảng 60 người và đa số đều là những kỹ sư đầu ngành trong lĩnh vực sản xuất xe hơi, những siêu xe của Pagani khiến người ta mê mẩn ngay từ cái nhìn đầu tiên bởi những đường cong quyến rũ cùng khả năng vận hành mạnh mẽ, đủ để làm hài lòng bất cứ tín đồ tốc độ nào.",
     "owner": [
     ],

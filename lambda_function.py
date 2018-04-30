@@ -7,12 +7,16 @@ import json
 import hashlib
 import hmac
 import time
-from skills import GraphQLManager
+from skills_manager import GraphQLManager
 
 
 client_secrets = {
     'nr1ylkb0jcy4pb': 'JdqCSvYC96Bz7jGS0NGABNTxEasx0IuI',
     'mj9zmlpqxh92tz': 'uLzFZXW0sqOUTiOxDVfycrR9CZ62MTt6',
+    'u0ma9p6lmhejbf': 'wZe8fenKvzNfVsRNY8ERnCYdMPiZQ0Kj',
+    'ghnwbonioo9nzc': 'VwpPXOf28XaPi8ZzRcLvnSeIjGFzoyGt',
+    '9bmaeo13dq8zfm': 'SyMU3oislb8AB6toOAPV8SwoTvNe3f46',
+    'pgnps9psbykzb1': 'vJkiKtQsh9slNjJdc5Yq9lEpAHE803oP',
 }
 
 
@@ -30,13 +34,11 @@ def get_invocation(data, token, pass_token):
                     digestmod=hashlib.sha256).hexdigest()
 
     if not pass_token and hash != token:
-        print('Forbidden')
         return False
 
     expired_in = invocation.get('expired_in')
 
     if expired_in < time.time():
-        print('Expired')
         return False
 
     return invocation

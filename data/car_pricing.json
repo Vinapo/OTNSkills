@@ -1,9 +1,35 @@
 [
   {
-    "trim": "Mazda CX-5",
+    "trim": "Mazda CX-5 2.0L AT 2WD",
     "series": "CX-5",
     "maker": "Mazda",
-    "price": 121212112,
-    "rolling_price": 123232233
+    "transmission": {
+      "drivetrain": "2WD",
+      "type": "AT"
+    },
+    "price": 889000000,
+    "rolling_price": 980897000
+  },
+  {
+    "trim": "Mazda CX-5 2.5L AT AWD",
+    "series": "CX-5",
+    "maker": "Mazda",
+    "transmission": {
+      "drivetrain": "AWD",
+      "type": "AT"
+    },
+    "price": 999000000,
+    "rolling_price": 1101897000
+  },
+  {
+    "trim": "Honda CR-V VTEC Turbo E",
+    "series": "CR-V",
+    "maker": "Honda",
+    "transmission": {
+      "drivetrain": "AWD",
+      "type": "CVT"
+    },
+    "price": 1136000000,
+    "rolling_price": 1253597000
   }
 ]

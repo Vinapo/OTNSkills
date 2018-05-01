@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import json
-from graph_models import *
+from models import *
 import csv
+
 
 def load_makers():
     result = {}
@@ -110,3 +111,27 @@ def load_definitions():
             result[item_.name] = item_
 
     return result
+
+
+class Storage(object):
+    db = {
+        'makers': {},
+        'models': {},
+        'pricing': {},
+        'definitions': {}
+    }
+
+    def get(self, domain, key):
+        if not self.db.get(domain):
+            if domain == 'makers':
+                self.db[domain] = load_makers()
+            elif domain == 'pricing':
+                self.db[domain] = load_car_pricing()
+            elif domain == 'definitions':
+                self.db[domain] = load_definitions()
+            elif domain == 'models':
+                makers = self.db.get('makers')
+                if not makers:
+                    self.db['makers'] = load_makers()
+                self.db[domain] = load_models(makers)
+        return self.db[domain].get(key)

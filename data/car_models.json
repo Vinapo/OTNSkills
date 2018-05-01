@@ -1,0 +1,56 @@
+[
+  {
+    "trim": "Mazda 3 Hatchback",
+    "fullname": "Mazda 3 Hatchback",
+    "series": "Mazda 3",
+    "maker": "Mazda",
+    "avatar": "https://cdn.otonhanh.vn/images/ac38deb48309c48937dcf6f4d337b734_480x270.png",
+    "transmission": {
+      "drivetran": "FWD",
+      "type": "AT"
+    },
+    "engine": {
+      "horsepower": 110,
+      "displacement": 1.5
+    },
+    "seats": 5,
+    "color": "red",
+    "body_type": "Hatchback"
+  },
+  {
+    "trim": "Sedan 1.5L",
+    "fullname": "Mazda 3 Sedan 1.5L",
+    "series": "Mazda 3",
+    "maker": "Mazda",
+    "avatar": "https://cdn.otonhanh.vn/images/0bd5abd731793b7e140ca5b73ae0dd95_480x270.png",
+    "transmission": {
+      "drivetran": "FWD",
+      "type": "AT"
+    },
+    "engine": {
+      "horsepower": 110,
+      "displacement": 1.5
+    },
+    "seats": 5,
+    "color": "red",
+    "body_type": "Sedan"
+  },
+  {
+    "trim": "Sedan 2.0L",
+    "fullname": "Mazda 3 Sedan 2.0L",
+    "series": "Mazda 3",
+    "maker": "Mazda",
+    "avatar": "https://cdn.otonhanh.vn/images/0bd5abd731793b7e140ca5b73ae0dd95_480x270.png",
+    "transmission": {
+      "drivetran": "FWD",
+      "type": "AT"
+    },
+    "engine": {
+      "horsepower": 153,
+      "displacement": 2.0
+    },
+    "seats": 5,
+    "color": "red",
+    "body_type": "Sedan"
+  }
+]

@@ -111,6 +111,8 @@ class Model(graphene.ObjectType):
     seats = graphene.Int()
     colors = graphene.String()
     bodyType = graphene.String()
+    description = graphene.String()
+    cover = graphene.Field(lambda : Source)
 
 
 class Transmission(graphene.ObjectType):

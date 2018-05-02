@@ -68,7 +68,12 @@ def load_models(makers):
                     displacement=item.get('engine', {}).get('displacement')
                 ),
                 seats=item.get('seats'),
-                bodyType=item.get('body_type')
+                bodyType=item.get('body_type'),
+                description=item.get('description'),
+                cover=Source(
+                    url=item.get('cover').get('url'),
+                    description=item.get('cover').get('description'),
+                )
             )
 
             fullname = item.get('fullname').lower()

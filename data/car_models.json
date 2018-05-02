@@ -15,7 +15,12 @@
     },
     "seats": 5,
     "color": "red",
-    "body_type": "Hatchback"
+    "body_type": "Hatchback",
+    "description": "Thiết kế hiện đại với những dòng chuyển động linh hoạt trên thân xe cùng những công nghệ tiên phong và tiện nghi vượt trội, Mazda 3 sẵn sàng chinh phục mọi chuyến đi.",
+    "cover": {
+      "url": "https://cdn.otonhanh.vn/images/d6054e2a67a37c4a190fd3529e39c1c1_800x600.jpg",
+      "description": ""
+    }
   },
   {
     "trim": "Sedan 1.5L",
@@ -33,7 +38,12 @@
     },
     "seats": 5,
     "color": "red",
-    "body_type": "Sedan"
+    "body_type": "Sedan",
+    "description": "Thiết kế hiện đại với những dòng chuyển động linh hoạt trên thân xe cùng những công nghệ tiên phong và tiện nghi vượt trội, Mazda 3 sẵn sàng chinh phục mọi chuyến đi.",
+    "cover": {
+      "url": "https://cdn.otonhanh.vn/images/d714c2bb47ef621f568602d1c25ecbc6_800x600.jpg",
+      "description": ""
+    }
   },
   {
     "trim": "Sedan 2.0L",
@@ -51,6 +61,11 @@
     },
     "seats": 5,
     "color": "red",
-    "body_type": "Sedan"
+    "body_type": "Sedan",
+    "description": "Thiết kế hiện đại với những dòng chuyển động linh hoạt trên thân xe cùng những công nghệ tiên phong và tiện nghi vượt trội, Mazda 3 sẵn sàng chinh phục mọi chuyến đi.",
+    "cover": {
+      "url": "https://cdn.otonhanh.vn/images/d714c2bb47ef621f568602d1c25ecbc6_800x600.jpg",
+      "description": ""
+    }
   }
 ]

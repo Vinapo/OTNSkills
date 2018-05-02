@@ -6,7 +6,7 @@
     "maker": "Mazda",
     "avatar": "https://cdn.otonhanh.vn/images/ac38deb48309c48937dcf6f4d337b734_480x270.png",
     "transmission": {
-      "drivetran": "FWD",
+      "drivetrain": "FWD",
       "type": "AT"
     },
     "engine": {
@@ -24,7 +24,7 @@
     "maker": "Mazda",
     "avatar": "https://cdn.otonhanh.vn/images/0bd5abd731793b7e140ca5b73ae0dd95_480x270.png",
     "transmission": {
-      "drivetran": "FWD",
+      "drivetrain": "FWD",
       "type": "AT"
     },
     "engine": {
@@ -42,7 +42,7 @@
     "maker": "Mazda",
     "avatar": "https://cdn.otonhanh.vn/images/0bd5abd731793b7e140ca5b73ae0dd95_480x270.png",
     "transmission": {
-      "drivetran": "FWD",
+      "drivetrain": "FWD",
       "type": "AT"
     },
     "engine": {

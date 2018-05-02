@@ -43,17 +43,48 @@ def load_makers():
 
 def load_models(makers):
     result = {}
+    with open('data/car_models.json') as f:
+        items = json.load(f)
 
-    result['mazda 3 hatchback'] = Model(
-        id=1,
-        name=u'Mazda 3 Hatchback',
-        trim=u'Mazda 3 Hatchback 1.5',
-        series=Series(
-            name='Mazda 3',
-            maker=makers.get('mazda')
-        )
-    )
+        for item in items:
+            model = Model(
+                trim=item.get('trim'),
+                fullname=item.get('fullname'),
+                series=Series(
+                    name=item.get('series'),
+                    maker=Maker(
+                        name=item.get('maker')
+                    )
+                ),
+                avatar=Source(
+                    url=item.get('avatar')
+                ),
+                transmission=Transmission(
+                    drivetrain=item.get('transmission', {}).get('drivetrain'),
+                    type=item.get('transmission', {}).get('type')
+                ),
+                engine=Engine(
+                    horsepower=item.get('engine', {}).get('horsepower'),
+                    displacement=item.get('engine', {}).get('displacement')
+                ),
+                seats=item.get('seats'),
+                bodyType=item.get('body_type')
+            )
 
+            fullname = item.get('fullname').lower()
+            result[fullname] = model
+
+            maker = item.get('maker').lower()
+            if maker in result:
+                result[maker].append(model)
+            else:
+                result[maker] = [model]
+
+            series = item.get('series').lower()
+            if series in result:
+                result[series].append(model)
+            else:
+                result[series] = [model]
     return result
 
 
@@ -122,6 +153,7 @@ class Storage(object):
     }
 
     def get(self, domain, key):
+        if not key: return None
         if not self.db.get(domain):
             if domain == 'makers':
                 self.db[domain] = load_makers()
@@ -134,4 +166,4 @@ class Storage(object):
                 if not makers:
                     self.db['makers'] = load_makers()
                 self.db[domain] = load_models(makers)
-        return self.db[domain].get(key)
+        return self.db[domain].get(key.lower())

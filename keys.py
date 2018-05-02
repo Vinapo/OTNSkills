@@ -6,4 +6,5 @@ APP_KEYS = {
     'ghnwbonioo9nzc': 'VwpPXOf28XaPi8ZzRcLvnSeIjGFzoyGt',
     '9bmaeo13dq8zfm': 'SyMU3oislb8AB6toOAPV8SwoTvNe3f46',
     'pgnps9psbykzb1': 'vJkiKtQsh9slNjJdc5Yq9lEpAHE803oP',
+    'peua9209vvyb72': 'oyJniEVX2JIPLqtNB1MqhCBOXqOsgZpU',
 }

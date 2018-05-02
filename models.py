@@ -81,17 +81,47 @@ class Series(graphene.ObjectType):
 
 
 class Model(graphene.ObjectType):
-    id = graphene.ID()
-    name = graphene.String()
+    '''
+    {
+    "trim": "Mazda 3 Hatchback",
+    "fullname": "Mazda 3 Hatchback",
+    "series": "Mazda 3",
+    "maker": "Mazda",
+    "avatar": "https://cdn.otonhanh.vn/images/ac38deb48309c48937dcf6f4d337b734_480x270.png",
+    "transmission": {
+      "drivetran": "FWD",
+      "type": "AT"
+    },
+    "engine": {
+      "horsepower": 110,
+      "displacement": 1.5
+    },
+    "seats": 5,
+    "color": "red",
+    "body_type": "Hatchback"
+  }
+    '''
+    # id = graphene.ID()
     trim = graphene.String()
+    fullname = graphene.String()
     series = graphene.Field(lambda : Series)
     avatar = graphene.Field(lambda : Source)
-    images = graphene.List(lambda : Source)
+    transmission = graphene.Field(lambda : Transmission)
+    engine = graphene.Field(lambda : Engine)
+    seats = graphene.Int()
+    colors = graphene.String()
+    bodyType = graphene.String()
 
 
 class Transmission(graphene.ObjectType):
     drivetrain = graphene.String()
     type = graphene.String()
+
+
+class Engine(graphene.ObjectType):
+    horsepower = graphene.Int()
+    displacement = graphene.Float()
+
 
 
 class CarPricing(graphene.ObjectType):

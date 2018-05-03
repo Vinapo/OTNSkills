@@ -100,6 +100,7 @@ def load_car_pricing():
 
         for item in items:
             item_ = CarPricing(
+                fullname=item.get('fullname'),
                 trim=item.get('trim'),
                 series=item.get('series'),
                 price=item.get('price'),
@@ -110,15 +111,15 @@ def load_car_pricing():
                 )
             )
 
-            trim = item_.trim.lower()
-            result[trim] = item_
+            fullname = item_.fullname.lower()
+            result[fullname] = item_
 
             series = item_.series.lower()
 
             if series in result:
-                result[series].append(trim)
+                result[series].append(fullname)
             else:
-                result[series] = [trim]
+                result[series] = [fullname]
 
     return result
 

@@ -3,6 +3,12 @@ from models import CarPricing
 
 
 class ComparePricingAPI(graphene.ObjectType):
+
+    app_key = {
+        'invocation_id': 'pgnps9psbykzb1',
+        'client_secret': 'vJkiKtQsh9slNjJdc5Yq9lEpAHE803oP'
+    }
+
     comparePricing = graphene.List(CarPricing,
                                 maker1=graphene.String(),
                                 series1=graphene.String(),

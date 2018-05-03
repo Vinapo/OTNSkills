@@ -3,6 +3,18 @@ from models import Model
 
 
 class ModelsAPI(graphene.ObjectType):
+
+    app_key = [
+        {
+            'invocation_id': 'peua9209vvyb72',
+            'client_secret': 'oyJniEVX2JIPLqtNB1MqhCBOXqOsgZpU'
+        },
+        {
+            'invocation_id': 'bf544daqnr1x9a',
+            'client_secret': 'VuhB7K01c7z8jSnSIVnjoHYrXrnAUcoM'
+        }
+    ]
+
     models = graphene.List(Model,
                            fullname=graphene.String(default_value=''),
                            series=graphene.String(default_value=''),

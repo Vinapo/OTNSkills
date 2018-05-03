@@ -8,7 +8,6 @@ import hashlib
 import hmac
 import time
 from manager import GraphQLManager
-from keys import APP_KEYS
 
 
 graphql_manager = GraphQLManager()
@@ -17,7 +16,7 @@ graphql_manager = GraphQLManager()
 def get_invocation(data, token, pass_token):
 
     invocation = json.loads(b64decode(data))
-    client_secret = APP_KEYS.get(invocation.get('invocation_id'))
+    client_secret = graphql_manager.app_keys.get(invocation.get('invocation_id'))
 
     secret_key = hashlib.new('sha256', client_secret).digest()
     hash = hmac.new(key=secret_key,

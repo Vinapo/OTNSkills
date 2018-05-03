@@ -6,14 +6,20 @@ import graphene
 import pkgutil
 import importlib
 from loader import Storage
+import ConfigParser, os
 
 
 class QueryAPIContext(object):
     storage = Storage()
+    settings = ConfigParser.ConfigParser().readfp(
+        open(os.environ.get('STAGE', 'development') + '.ini')
+    )
 
 
 class GraphQLManager(object):
     def __init__(self):
+
+        self.app_keys = {}
 
         apis = []
         folder = 'apis'
@@ -22,6 +28,14 @@ class GraphQLManager(object):
             for cls in mod.__dict__.keys():
                 if cls[-3:] != 'API': continue
                 cls = getattr(mod, cls)
+                try:
+                    app_key = getattr(cls, 'app_key')
+                    if not isinstance(app_key, list):
+                        app_key = [app_key]
+                    for key in app_key:
+                        self.app_keys[key.get('invocation_id')] = key.get('client_secret')
+                except:
+                    pass
                 apis.append(cls)
 
         Query = type('Query', tuple(apis), {})

@@ -127,6 +127,7 @@ class Engine(graphene.ObjectType):
 
 
 class CarPricing(graphene.ObjectType):
+    fullname = graphene.String()
     trim = graphene.String()
     series = graphene.Field(lambda : Series)
     price = graphene.Float()

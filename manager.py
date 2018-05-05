@@ -7,13 +7,27 @@ import pkgutil
 import importlib
 from loader import Storage
 import ConfigParser, os
+from adapters.elasticache import ElastiCache
 
 
 class QueryAPIContext(object):
-    storage = Storage()
-    settings = ConfigParser.ConfigParser().readfp(
-        open(os.environ.get('STAGE', 'development') + '.ini')
-    )
+    def __init__(self):
+        self.storage = Storage()
+
+        self.settings = ConfigParser.ConfigParser()
+
+        self.settings.readfp(
+            open((os.environ.get('STAGE') or 'development') + '.ini')
+        )
+
+        host = self.settings.get('app:main', 'aws.redis.host')
+        if host:
+            self.cache = ElastiCache(
+                host=host,
+                port=self.settings.get('app:main', 'aws.redis.port')
+            )
+        else:
+            self.cache = {}
 
 
 class GraphQLManager(object):

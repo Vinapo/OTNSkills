@@ -113,6 +113,7 @@ class Model(graphene.ObjectType):
     bodyType = graphene.String()
     description = graphene.String()
     cover = graphene.Field(lambda : Source)
+    wheelSize = graphene.Float()
 
 
 class Transmission(graphene.ObjectType):

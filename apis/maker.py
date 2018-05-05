@@ -14,4 +14,12 @@ class MakerAPI(graphene.ObjectType):
                            )
 
     def resolve_maker(self, info, brand):
-        return info.context.storage.get('makers', brand)
+        cache = info.context.cache
+
+        def f(x):
+            return info.context.storage.get('makers', x)
+
+        if cache:
+            return cache.get(brand, ex=3000, callback=f)
+
+        return f(brand)

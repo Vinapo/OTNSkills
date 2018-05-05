@@ -18,10 +18,13 @@ def get_invocation(data, token, pass_token):
     invocation = json.loads(b64decode(data))
     client_secret = graphql_manager.app_keys.get(invocation.get('invocation_id'))
 
-    secret_key = hashlib.new('sha256', client_secret).digest()
-    hash = hmac.new(key=secret_key,
-                    msg=data,
-                    digestmod=hashlib.sha256).hexdigest()
+    if client_secret:
+        secret_key = hashlib.new('sha256', client_secret).digest()
+        hash = hmac.new(key=secret_key,
+                        msg=data,
+                        digestmod=hashlib.sha256).hexdigest()
+    else:
+        return False
 
     if hash != token:
         return False

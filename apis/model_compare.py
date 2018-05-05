@@ -4,10 +4,16 @@ from models import Model
 
 class CompareModelsAPI(graphene.ObjectType):
 
-    app_key = {
-        'invocation_id': '0hcc70hudadlz1',
-        'client_secret': '93mJTXMTc4fJ5OhsJxAkyJEw35UDBS7a'
-    }
+    app_key = [
+        {
+            'invocation_id': '0hcc70hudadlz1',
+            'client_secret': '93mJTXMTc4fJ5OhsJxAkyJEw35UDBS7a'
+        },
+        {
+            'invocation_id': 'dd0ssvs3svbw6j',
+            'client_secret': '1wuhDqeDDCj0RTjO0uwWuyEslMYZpytF'
+        }
+    ]
 
     compareModels = graphene.List(Model,
                              fullname1=graphene.String(default_value=''),
@@ -26,6 +32,7 @@ class CompareModelsAPI(graphene.ObjectType):
                              transmissionDrivetrain2=graphene.String(default_value=''),
                              transmissionType2=graphene.String(default_value=''),
                              engineDisplacement2=graphene.String(default_value=''),
+                             limit=graphene.Int(default_value=4),
                              )
     def resolve_compareModels(self, info,
                               fullname1,
@@ -43,9 +50,14 @@ class CompareModelsAPI(graphene.ObjectType):
                               releasedDate2,
                               transmissionDrivetrain2,
                               transmissionType2,
-                              engineDisplacement2
+                              engineDisplacement2,
+                              limit
                         ):
+
+        # print(limit)
+
+        s = info.context.storage
         return [
-            info.context.storage.get('models', series1),
-            info.context.storage.get('models', series2)
+            s.get('models', series1)[0],
+            s.get('models', 'Mazda 3 Sedan 1.5L'),
         ]

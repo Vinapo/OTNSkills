@@ -17,9 +17,7 @@ def load_makers():
                 name=item.get('name'),
                 nativeName=item.get('native_name'),
                 found=item.get('found'),
-                founder=People(
-                    name=item.get('founder')
-                ),
+                founder=[People(name=v) for v in item.get('founder')],
                 revenue=item.get('revenue'),
                 netIncome=item.get('net_income'),
                 description=item.get('description'),
@@ -35,7 +33,7 @@ def load_makers():
                 sales=[Sales(year=ite.get('year'),
                              units=ite.get('units'),
                              rank=ite.get('rank'),
-                             year_over_year=ite.get('year_over_year')
+                             yearOverYear=ite.get('year_over_year')
                              )
                        for ite in item.get('sales', [])]
             )
@@ -61,6 +59,11 @@ def load_models(makers):
                 avatar=Source(
                     url=item.get('avatar')
                 ),
+                cover=Source(
+                    url=item.get('cover').get('url'),
+                    description=item.get('cover').get('description'),
+                ),
+                description=item.get('description'),
                 transmission=Transmission(
                     drivetrain=get_enum_value(TransmissionDriveTrain, item.get('transmission', {}).get('drivetrain')),
                     type=get_enum_value(TransmissionType, item.get('transmission', {}).get('type'))
@@ -69,13 +72,10 @@ def load_models(makers):
                     horsepower=item.get('engine', {}).get('horsepower'),
                     displacement=item.get('engine', {}).get('displacement')
                 ),
-                seats=item.get('seats'),
-                bodyType=getattr(BodyType, item.get('body_type').lower()).value,
-                description=item.get('description'),
-                cover=Source(
-                    url=item.get('cover').get('url'),
-                    description=item.get('cover').get('description'),
-                )
+                numberOfSeats=item.get('seats'),
+                body=Body(
+                    type=get_enum_value(BodyType, item.get('body_type').lower())
+                ),
             )
 
             fullname = item.get('fullname').lower()

@@ -1,5 +1,5 @@
 import graphene
-from models import Maker
+from graphql_models import Maker
 
 
 class MakersAPI(graphene.ObjectType):

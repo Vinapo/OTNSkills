@@ -16,6 +16,11 @@ class Organization(graphene.ObjectType):
     share = graphene.String()
 
 
+class People(graphene.ObjectType):
+    name = graphene.String()
+    share = graphene.String()
+
+
 class Sales(graphene.ObjectType):
     units = graphene.Int()
     year = graphene.Int()
@@ -61,12 +66,12 @@ class Maker(graphene.ObjectType):
     name = graphene.String()
     nativeName = graphene.String()
     found = graphene.Int()
-    founder = graphene.List(lambda : graphene.String)
+    founder = graphene.List(lambda : People)
     revenue = graphene.String()
     netIncome = graphene.String()
     description = graphene.String()
     shareholders = graphene.List(lambda : Organization)
-    divisions = graphene.List(lambda : graphene.String)
+    divisions = graphene.List(lambda : Organization)
     subsidiaries = graphene.Int()
     website = graphene.String()
     logo = graphene.Field(lambda : Source)

@@ -1,5 +1,5 @@
 import graphene
-from models import Definitions
+from graphql_models import Definitions
 
 
 class DefinitionsAPI(graphene.ObjectType):

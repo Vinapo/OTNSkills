@@ -1,5 +1,5 @@
 import graphene
-from models import CarPricing
+from graphql_models import CarPricing
 
 
 class ComparePricingAPI(graphene.ObjectType):

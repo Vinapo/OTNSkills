@@ -129,11 +129,14 @@ if __name__ == '__main__':
     cache.delete('foo2')
     print(cache.get('foo2'))
     from pprint import pprint
+    import pickle
     # pprint(cache.lrange('user:-70Xzpab1m5l', 0, 10))
     # cache.redis.rename('user:7BvGnROA1ox-', 'user:7BvGnROA1ox')
     # cache.redis.delete('user:7BvGnROA1ox')
 
-    pprint(cache.mget('d427a9a9a23777545cdefa22203d0af15d725475'))
+    # pprint(cache.mget('d427a9a9a23777545cdefa22203d0af15d725475'))
+    # a = cache.get('maker-audi')
+    # print(a.description)
 
 
 

@@ -1,5 +1,5 @@
 import graphene
-from models import Model, Series, Maker
+from graphql_models import Model, Series, Maker
 
 
 class WheelSizeAPI(graphene.ObjectType):

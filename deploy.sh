@@ -5,8 +5,10 @@ pip install -r requirements.txt --target ./packages
 if [ -d packages ]; then
 	cd packages
     mkdir apis
+    mkdir adapters
     mkdir data
 	cp ../*.py .
+	cp ../adapters/* adapters
 	cp ../apis/* apis
 	cp ../data/* data
 	cp ../production.ini .

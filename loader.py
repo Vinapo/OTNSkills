@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import json
-from models import *
+from graphql_models import *
 import csv
 
 
@@ -17,12 +17,14 @@ def load_makers():
                 name=item.get('name'),
                 nativeName=item.get('native_name'),
                 found=item.get('found'),
-                founder=item.get('founder'),
+                founder=People(
+                    name=item.get('founder')
+                ),
                 revenue=item.get('revenue'),
                 netIncome=item.get('net_income'),
                 description=item.get('description'),
                 shareholders=[Organization(name=v[0], share='%s%%' % v[1]) for v in item.get('owner')],
-                divisions = item.get('divisions'),
+                divisions=[Organization(name=v) for v in item.get('divisions')],
                 subsidiaries=item.get('subsidiaries'),
                 website=item.get('website'),
                 logo=Source(url=item.get('logo')),

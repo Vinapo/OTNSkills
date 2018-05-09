@@ -4,6 +4,77 @@ from __future__ import print_function
 
 import graphene
 
+# Enums
+
+
+def get_enum_value(cls, name):
+    d = cls.__dict__
+    for k in d.keys():
+        if k[0] != '_' and k:
+            v = getattr(cls, k)
+            if k == name or v.__dict__.get('_value_') == name:
+                return v.value
+    return None
+
+
+class BodyType(graphene.Enum):
+    sedan = 1
+    hatchback = 2
+    suv = 3
+    mpv = 4
+    pickup = 5
+    truck = 6
+    coupe = 7
+    convertible = 8
+    crossover = 9
+    van = 10
+    minivan = 11
+
+
+class TransmissionType(graphene.Enum):
+    MT = 1
+    AT = 2
+    CVT = 3
+    DCT = 4
+    PDK = 5
+
+
+class TransmissionDriveTrain(graphene.Enum):
+    # ENUM('All-wheel drive', 'Four-wheel drive', 'Rear-wheel drive', 'Two-wheel drive', 'Front-wheel drive')
+    AllWheelDrive = 'AWD'
+    FourMatic = '4Matic' # Mercedes
+    FourWheelDrive = '4WD'
+    RearWheelDrive = 'RWD'
+    TwoWheelDrive = '2WD'
+    FrontWheelDrive = 'FWD'
+
+
+class ObjectPosition(graphene.Enum):
+    Front = 1
+    FrontLeft = 2
+    FrontRight = 3
+    Driver = 4
+    Rear = 5
+    RearLeft = 6
+    RearRight = 7
+    Third = 8
+    Back = 9
+    Top = 10 # Sun roof
+
+
+class MaterialType(graphene.Enum):
+    Leather = 1
+    Fabric = 2
+
+
+class FuelType(graphene.Enum):
+    petrol = 1
+    diesel = 2
+    electric = 3
+    hybrid = 4
+
+
+# Class
 
 class Source(graphene.ObjectType):
     url = graphene.String()
@@ -21,11 +92,32 @@ class People(graphene.ObjectType):
     share = graphene.String()
 
 
+class Place(graphene.ObjectType):
+    name = graphene.String()
+    address = graphene.String()
+    timezone = graphene.Int()
+    countryCode = graphene.Int()
+    countryName = graphene.String()
+    coordinate = graphene.Field(lambda : Coordinate)
+
+
+class Coordinate(graphene.ObjectType):
+    longitude = graphene.Float()
+    latitude = graphene.Float()
+
+
 class Sales(graphene.ObjectType):
     units = graphene.Int()
     year = graphene.Int()
     rank = graphene.Int()
-    year_over_year = graphene.Int()
+    yearOverYear = graphene.Int()
+
+
+class Color(graphene.ObjectType):
+    name = graphene.String()
+    hexColor = graphene.String() #00aa00
+    sample = graphene.Field(lambda : Source)
+    fullSample = graphene.List(lambda : Source)
 
 
 class Maker(graphene.ObjectType):
@@ -73,7 +165,7 @@ class Maker(graphene.ObjectType):
     shareholders = graphene.List(lambda : Organization)
     divisions = graphene.List(lambda : Organization)
     subsidiaries = graphene.Int()
-    website = graphene.String()
+    website = graphene.Field(lambda : Source)
     logo = graphene.Field(lambda : Source)
     image = graphene.Field(lambda : Source)
     sales = graphene.List(lambda : Sales)
@@ -82,54 +174,101 @@ class Maker(graphene.ObjectType):
 class Series(graphene.ObjectType):
     id = graphene.ID()
     name = graphene.String()
-    maker = graphene.Field(lambda : Maker)
+    madeBy = graphene.Field(lambda : Maker)
 
 
 class Model(graphene.ObjectType):
-    '''
-    {
-    "trim": "Mazda 3 Hatchback",
-    "fullname": "Mazda 3 Hatchback",
-    "series": "Mazda 3",
-    "maker": "Mazda",
-    "avatar": "https://cdn.otonhanh.vn/images/ac38deb48309c48937dcf6f4d337b734_480x270.png",
-    "transmission": {
-      "drivetran": "FWD",
-      "type": "AT"
-    },
-    "engine": {
-      "horsepower": 110,
-      "displacement": 1.5
-    },
-    "seats": 5,
-    "color": "red",
-    "body_type": "Hatchback"
-  }
-    '''
-    # id = graphene.ID()
+
     trim = graphene.String()
     fullname = graphene.String()
+    description = graphene.String()
     series = graphene.Field(lambda : Series)
     avatar = graphene.Field(lambda : Source)
     transmission = graphene.Field(lambda : Transmission)
     engine = graphene.Field(lambda : Engine)
-    seats = graphene.Int()
-    colors = graphene.String()
-    bodyType = graphene.String()
-    description = graphene.String()
+    colors = graphene.List(lambda : Color)
+    bodyType = graphene.Field(lambda : BodyType)
     cover = graphene.Field(lambda : Source)
-    wheelSize = graphene.Float()
+    fuelTank = graphene.Float()
+    tire = graphene.Field(lambda : Tire)
+    wheel = graphene.Field(lambda : Wheel)
+    madeIn = graphene.Field(lambda : Place)
+    doors = graphene.List(lambda : Door)
+    numberOfDoors = graphene.Int()
+    seats = graphene.List(lambda : Seat)
+    numberOfSeats = graphene.Int()
 
 
 class Transmission(graphene.ObjectType):
-    drivetrain = graphene.String()
-    type = graphene.String()
+    drivetrain = graphene.Field(lambda : TransmissionDriveTrain)
+    type = graphene.Field(lambda : TransmissionType)
 
 
 class Engine(graphene.ObjectType):
-    horsepower = graphene.Int()
-    displacement = graphene.Float()
+    displacement = graphene.Float() # cm3
+    type = graphene.String()
+    fuel = graphene.Field(lambda : FuelType)
+    hasTurbo = graphene.Boolean()
+    zeroTo60mph = graphene.Float()
+    topTrackSpeed = graphene.Int()
 
+    horsepower = graphene.Int()
+    horsepowerAtRpm = graphene.List(lambda : graphene.Int) # [min, max] r/min
+
+    torque = graphene.Int() # Max. tourque (Nm)
+    torqueAtRpm = graphene.List(lambda : graphene.Int) # [min, max] r/min
+    numberOfCylinders = graphene.Int()
+
+
+class ChassisAndSuspension(graphene.ObjectType):
+    pass
+
+
+class Tire(graphene.ObjectType):
+    '''
+    width/aspectRatio/diameter
+    name: P185/75R14 -> width:185, aspectRatio: 75%, diameter: 14
+    '''
+    name = graphene.String()
+    width = graphene.Int() # millimeters
+    aspectRatio = graphene.Int() # percent
+    diameter = graphene.Int() # inches
+    color = graphene.Field(lambda : Color)
+
+
+class Wheel(graphene.ObjectType):
+    name = graphene.String()
+    diameter = graphene.Int() # inches
+    color = graphene.Field(lambda : Color)
+
+
+class Door(graphene.ObjectType):
+    position = graphene.Field(lambda : ObjectPosition)
+    hasSoftClose = graphene.Boolean()
+    hasPower = graphene.Boolean()
+    hasHandsFree = graphene.Boolean()
+    hasHeightAdjustability = graphene.Boolean()
+    isPanoramic = graphene.Boolean()
+    curtains = graphene.List(lambda : WindowCurtain)
+
+
+class WindowCurtain(graphene.ObjectType):
+    position = graphene.Field(lambda : ObjectPosition)
+    hasPower = graphene.Boolean()
+
+
+class Seat(graphene.ObjectType):
+    position = graphene.Field(lambda : ObjectPosition)
+    material = graphene.Field(lambda : MaterialType)
+    isPremiumMaterial = graphene.Boolean()
+    hasPower = graphene.Boolean()
+    hasHeating = graphene.Boolean()
+    hasMassage= graphene.Boolean()
+    adjustable = graphene.Int() # number of way adjustable
+    memory = graphene.Int() # memory of way adjustable
+    isFolding = graphene.Boolean()
+    isIsofix = graphene.Boolean()
+    color = graphene.Field(lambda : Color)
 
 
 class CarPricing(graphene.ObjectType):

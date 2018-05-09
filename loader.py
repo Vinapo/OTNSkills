@@ -54,7 +54,7 @@ def load_models(makers):
                 fullname=item.get('fullname'),
                 series=Series(
                     name=item.get('series'),
-                    maker=Maker(
+                    madeBy=Maker(
                         name=item.get('maker')
                     )
                 ),
@@ -62,15 +62,15 @@ def load_models(makers):
                     url=item.get('avatar')
                 ),
                 transmission=Transmission(
-                    drivetrain=item.get('transmission', {}).get('drivetrain'),
-                    type=item.get('transmission', {}).get('type')
+                    drivetrain=get_enum_value(TransmissionDriveTrain, item.get('transmission', {}).get('drivetrain')),
+                    type=get_enum_value(TransmissionType, item.get('transmission', {}).get('type'))
                 ),
                 engine=Engine(
                     horsepower=item.get('engine', {}).get('horsepower'),
                     displacement=item.get('engine', {}).get('displacement')
                 ),
                 seats=item.get('seats'),
-                bodyType=item.get('body_type'),
+                bodyType=getattr(BodyType, item.get('body_type').lower()).value,
                 description=item.get('description'),
                 cover=Source(
                     url=item.get('cover').get('url'),

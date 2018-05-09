@@ -74,6 +74,23 @@ class FuelType(graphene.Enum):
     hybrid = 4
 
 
+class SuspensionType(graphene.Enum):
+    LeafSprings = 'Leaf springs'
+    CoilSprings = 'Coil springs'
+    AirSprings = 'Air springs'
+    TorsionBean = 'Torsion Bean'
+    SportTuned = 'Sport-Tuned'
+    McPhersonStrut = 'McPherson strut'
+
+    MultiLink = 'Multi-link'
+    DoubleWishbone = 'Double Wishbone'
+
+
+class BrakeType(graphene.Enum):
+    disc = 1
+    drum = 2
+
+
 # Class
 
 class Source(graphene.ObjectType):
@@ -182,14 +199,12 @@ class Model(graphene.ObjectType):
     trim = graphene.String()
     fullname = graphene.String()
     description = graphene.String()
-    series = graphene.Field(lambda : Series)
+    cover = graphene.Field(lambda : Source)
     avatar = graphene.Field(lambda : Source)
+    series = graphene.Field(lambda : Series)
     transmission = graphene.Field(lambda : Transmission)
     engine = graphene.Field(lambda : Engine)
     colors = graphene.List(lambda : Color)
-    bodyType = graphene.Field(lambda : BodyType)
-    cover = graphene.Field(lambda : Source)
-    fuelTank = graphene.Float()
     tire = graphene.Field(lambda : Tire)
     wheel = graphene.Field(lambda : Wheel)
     madeIn = graphene.Field(lambda : Place)
@@ -197,6 +212,24 @@ class Model(graphene.ObjectType):
     numberOfDoors = graphene.Int()
     seats = graphene.List(lambda : Seat)
     numberOfSeats = graphene.Int()
+    body = graphene.Field(lambda : Body)
+    suspension = graphene.Field(lambda : ChassisAndSuspension)
+
+
+class Body(graphene.ObjectType):
+    type = graphene.Field(lambda : BodyType)
+    width = graphene.Float()
+    height = graphene.Float()
+    length = graphene.Float()
+    wheelbase = graphene.Float()
+    groundClearance = graphene.Float()
+    tuningCicle = graphene.Float()
+    dragCoefficient = graphene.Float()
+    unladenWeight = graphene.Float()
+    grossWeight = graphene.Float()
+    maxLoad = graphene.Float()
+    fuelTank = graphene.Float()
+    trunkCapacity = graphene.Float()
 
 
 class Transmission(graphene.ObjectType):
@@ -221,7 +254,12 @@ class Engine(graphene.ObjectType):
 
 
 class ChassisAndSuspension(graphene.ObjectType):
-    pass
+    front = graphene.List(lambda : SuspensionType)
+    rear = graphene.List(lambda : SuspensionType)
+    brakes = graphene.Field(lambda : BrakeType)
+    hasStability = graphene.Boolean()
+    hasSelfLeveling = graphene.Boolean()
+    hasHeightAdjustable = graphene.Boolean()
 
 
 class Tire(graphene.ObjectType):

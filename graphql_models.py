@@ -91,6 +91,51 @@ class BrakeType(graphene.Enum):
     drum = 2
 
 
+class MediaScreenType(graphene.Enum):
+    LCD = 'LCD'
+    TouchScreen = 'Touch screen'
+    AirTouchScreen = 'Air touch screen'
+
+
+class SpeakerType(graphene.Enum):
+    BOSS = 1
+    Burmester = 2
+    Pioneer = 3
+    BOSE = 4
+    Rockford = 5
+    Kenwood = 6
+    InfinityReference = 7
+    Alpine = 8
+    JBL = 9
+    JVC = 10
+
+
+class EntertainmentSystem(graphene.Enum):
+    Internal = 1
+    AppleCarPlay = 2
+    AndroidAuto = 3
+
+
+class CruiseControlType(graphene.Enum):
+    Standard = 1
+    Adaptive = 2
+
+
+class CameraType(graphene.Enum):
+    Standard = 1
+    View360 = 2
+
+
+class LightType(graphene.Enum):
+    Halogen = 1
+    Xenon = 2
+    LED = 3
+    HID = 4
+    Projector = 5
+    Laser = 6
+
+
+
 # Class
 
 class Source(graphene.ObjectType):
@@ -213,7 +258,11 @@ class Model(graphene.ObjectType):
     seats = graphene.List(lambda : Seat)
     numberOfSeats = graphene.Int()
     body = graphene.Field(lambda : Body)
-    suspension = graphene.Field(lambda : ChassisAndSuspension)
+    suspensions = graphene.Field(lambda : ChassisAndSuspensions)
+    airConditioner = graphene.Field(lambda : AirConditioner)
+    entertainment = graphene.Field(lambda : EntertainmentAndComfort)
+    lights = graphene.Field(lambda : Light)
+    mirrors = graphene.Field(lambda : Mirror)
 
 
 class Body(graphene.ObjectType):
@@ -223,7 +272,7 @@ class Body(graphene.ObjectType):
     length = graphene.Float()
     wheelbase = graphene.Float()
     groundClearance = graphene.Float()
-    tuningCicle = graphene.Float()
+    turningCicle = graphene.Float()
     dragCoefficient = graphene.Float()
     unladenWeight = graphene.Float()
     grossWeight = graphene.Float()
@@ -252,8 +301,10 @@ class Engine(graphene.ObjectType):
     torqueAtRpm = graphene.List(lambda : graphene.Int) # [min, max] r/min
     numberOfCylinders = graphene.Int()
 
+    hasStartStopButton = graphene.Boolean()
 
-class ChassisAndSuspension(graphene.ObjectType):
+
+class ChassisAndSuspensions(graphene.ObjectType):
     front = graphene.List(lambda : SuspensionType)
     rear = graphene.List(lambda : SuspensionType)
     brakes = graphene.Field(lambda : BrakeType)
@@ -271,7 +322,6 @@ class Tire(graphene.ObjectType):
     width = graphene.Int() # millimeters
     aspectRatio = graphene.Int() # percent
     diameter = graphene.Int() # inches
-    color = graphene.Field(lambda : Color)
 
 
 class Wheel(graphene.ObjectType):
@@ -307,6 +357,89 @@ class Seat(graphene.ObjectType):
     isFolding = graphene.Boolean()
     isIsofix = graphene.Boolean()
     color = graphene.Field(lambda : Color)
+
+
+class AirConditioner(graphene.ObjectType):
+    isAutomatic = graphene.Boolean()
+    numberOfZones = graphene.Int()
+    hasRearSeatsAir = graphene.Boolean()
+    hasThirdSeatsAir = graphene.Boolean()
+    hasAirFlowsThroughSeat = graphene.Boolean()
+
+
+class EntertainmentAndComfort(graphene.ObjectType):
+    screen = graphene.Field(lambda : MediaScreenType)
+    screenSize = graphene.Int() # inches
+    hasTouchPad = graphene.Boolean()
+    hasVoiceCommand = graphene.Boolean()
+    hasHandsFreeCall = graphene.Boolean()
+    hasCD = graphene.Boolean()
+    hasDVD = graphene.Boolean()
+    hasRadio = graphene.Boolean()
+    hasBluetooth = graphene.Boolean()
+    hasSDCardSlot = graphene.Boolean()
+    hasUSBSlot = graphene.Boolean()
+    hasHDMISlot = graphene.Boolean()
+    hasAUX = graphene.Boolean()
+    hasWifi = graphene.Boolean()
+    hasWirelessCharger = graphene.Boolean()
+    speakers = graphene.Field(lambda : SpeakerType)
+    numberOfSpeakers = graphene.Int()
+    entertainmentSystems = graphene.List(lambda : EntertainmentSystem)
+
+    rearDashboard = graphene.Boolean()
+    rearScreen = graphene.Boolean()
+
+
+class DrivingAssistant(graphene.ObjectType):
+    frontCamera = graphene.Field(lambda : CameraType)
+    rearCamera = graphene.Field(lambda : CameraType)
+
+    cruiseControl = graphene.Field(lambda : CruiseControlType)
+    hasLaneKeepingAssist = graphene.Boolean()
+    hasLaneTurnAssist = graphene.Boolean()
+    hasTrafficSignRecognition = graphene.Boolean()
+
+    hasParkAssist = graphene.Boolean()
+    hasAttentionAssist = graphene.Boolean()
+    hasHeadlampAssist = graphene.Boolean()
+    hasParkBrakeAutoHold = graphene.Boolean()
+    hasBrakeAdaptive = graphene.Boolean()
+    hasHUD = graphene.Boolean() # Head Up Display
+    hasBSW = graphene.Boolean() # Blink Spot Warning
+    hasEPS = graphene.Boolean() # Electric Power steering
+    autopilotLevel = graphene.Int()
+
+
+class Safety(graphene.ObjectType):
+    ABS = graphene.Boolean()
+    EBD = graphene.Boolean()
+    ESP = graphene.Boolean()
+    BA = graphene.Boolean() # Brake Assist
+    HSA = graphene.Boolean()
+    EPB = graphene.Boolean() # Electric Park Brake
+    TPMS = graphene.Boolean() # Tire Pressure Monitoring Systems
+
+    hasFrontSensors = graphene.Boolean()
+    hasRearSensors = graphene.Boolean()
+
+    numberOfAirBags = graphene.Int()
+
+
+class Light(graphene.ObjectType):
+    headLight = graphene.Field(lambda : LightType)
+    hasHeadLightClean = graphene.Boolean()
+    fogLight = graphene.Field(lambda : LightType)
+    daytimeRuningLight = graphene.Field(lambda : LightType)
+    rearLight = graphene.Field(lambda: LightType)
+    highBrakeLight = graphene.Field(lambda: LightType)
+    turningLight = graphene.Field(lambda: LightType)
+
+
+class Mirror(graphene.ObjectType):
+    hasPower = graphene.Boolean()
+    hasTurnSignal = graphene.Boolean()
+    hasHeating = graphene.Boolean()
 
 
 class CarPricing(graphene.ObjectType):

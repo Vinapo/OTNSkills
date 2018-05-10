@@ -12,7 +12,7 @@ def get_enum_value(cls, name):
     for k in d.keys():
         if k[0] != '_' and k:
             v = getattr(cls, k)
-            if k == name or v.__dict__.get('_value_') == name:
+            if k.lower() == name.lower() or v.__dict__.get('_value_') == name:
                 return v.value
     return None
 
@@ -41,12 +41,12 @@ class TransmissionType(graphene.Enum):
 
 class TransmissionDriveTrain(graphene.Enum):
     # ENUM('All-wheel drive', 'Four-wheel drive', 'Rear-wheel drive', 'Two-wheel drive', 'Front-wheel drive')
-    AllWheelDrive = 'AWD'
+    AllWheelDrive = 'All-wheel drive'
     FourMatic = '4Matic' # Mercedes
-    FourWheelDrive = '4WD'
-    RearWheelDrive = 'RWD'
-    TwoWheelDrive = '2WD'
-    FrontWheelDrive = 'FWD'
+    FourWheelDrive = 'Four-wheel drive'
+    RearWheelDrive = 'Rear-wheel drive'
+    TwoWheelDrive = 'Two-wheel drive'
+    FrontWheelDrive = 'Front-wheel drive'
 
 
 class ObjectPosition(graphene.Enum):
@@ -337,7 +337,7 @@ class Door(graphene.ObjectType):
     hasHandsFree = graphene.Boolean()
     hasHeightAdjustability = graphene.Boolean()
     isPanoramic = graphene.Boolean()
-    curtains = graphene.List(lambda : WindowCurtain)
+    curtain = graphene.Field(lambda : WindowCurtain)
 
 
 class WindowCurtain(graphene.ObjectType):

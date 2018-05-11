@@ -9,7 +9,7 @@ import unittest
 
 class GraphQueryTest(unittest.TestCase):
     def setUp(self):
-        self.nep = Neptune('ws://54.89.143.194:8182/gremlin')
+        self.nep = Neptune('ws://ec2-54-89-143-194.compute-1.amazonaws.com:8182/gremlin')
 
     def test_query_car_maker(self):
         g = self.nep.g
@@ -20,9 +20,13 @@ class GraphQueryTest(unittest.TestCase):
 
     def test_query_car_by_made_by(self):
         g = self.nep.g
-        result = g.V().has("name", "mazda")\
-                      .inE('made_by')\
+        result = g.V().hasLabel("CarMaker")\
+                      .has("_name", "mazda")\
+                      .inE("made_by")\
                       .outV()\
+                      .inE("attr")\
+                      .has("name","series")\
+                      .outV().dedup()\
                       .values("fullname")\
                       .toList()
         print(result)
@@ -69,7 +73,7 @@ class GraphQueryTest(unittest.TestCase):
         result = g.V().hasLabel("Car")\
                       .and_(
                         __.has("purposes", "family"),
-                        __.has("seats_amount", 7))\
+                        __.has("num_seats", 7))\
                       .values("fullname")\
                       .toList()
         print(result)

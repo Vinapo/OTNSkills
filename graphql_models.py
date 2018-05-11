@@ -12,7 +12,7 @@ def get_enum_value(cls, name):
     for k in d.keys():
         if k[0] != '_' and k:
             v = getattr(cls, k)
-            if k == name or v.__dict__.get('_value_') == name:
+            if k.lower() == name.lower() or v.__dict__.get('_value_') == name:
                 return v.value
     return None
 
@@ -41,12 +41,12 @@ class TransmissionType(graphene.Enum):
 
 class TransmissionDriveTrain(graphene.Enum):
     # ENUM('All-wheel drive', 'Four-wheel drive', 'Rear-wheel drive', 'Two-wheel drive', 'Front-wheel drive')
-    AllWheelDrive = 'AWD'
+    AllWheelDrive = 'All-wheel drive'
     FourMatic = '4Matic' # Mercedes
-    FourWheelDrive = '4WD'
-    RearWheelDrive = 'RWD'
-    TwoWheelDrive = '2WD'
-    FrontWheelDrive = 'FWD'
+    FourWheelDrive = 'Four-wheel drive'
+    RearWheelDrive = 'Rear-wheel drive'
+    TwoWheelDrive = 'Two-wheel drive'
+    FrontWheelDrive = 'Front-wheel drive'
 
 
 class ObjectPosition(graphene.Enum):
@@ -134,7 +134,13 @@ class LightType(graphene.Enum):
     Projector = 5
     Laser = 6
 
-
+class DrivingModeType(graphene.Enum):
+    Normal = 1
+    Eco = 2
+    Sport = 3
+    Comfort = 4
+    SportPlus = 5
+    Individual = 6
 
 # Class
 
@@ -240,10 +246,12 @@ class Series(graphene.ObjectType):
 
 
 class Model(graphene.ObjectType):
-
+    name = graphene.String()
+    id = graphene.Int()
     trim = graphene.String()
     fullname = graphene.String()
     description = graphene.String()
+    year = graphene.Int()
     cover = graphene.Field(lambda : Source)
     avatar = graphene.Field(lambda : Source)
     series = graphene.Field(lambda : Series)
@@ -263,6 +271,19 @@ class Model(graphene.ObjectType):
     entertainment = graphene.Field(lambda : EntertainmentAndComfort)
     lights = graphene.Field(lambda : Light)
     mirrors = graphene.Field(lambda : Mirror)
+    fuelTank = graphene.Float()
+    trunkCapacity = graphene.Float()
+    drivingAssistant = graphene.Field(lambda : DrivingAssistant)
+    safety = graphene.Field(lambda : Safety)
+    drivingMode = graphene.List(lambda : DrivingModeType)
+    fuelConsumption = graphene.Field(lambda : FuelConsumption)
+    luggageCompartmentVolume = graphene.Float()
+    price = graphene.Float()
+
+class FuelConsumption(graphene.ObjectType):
+    city = graphene.Float()
+    highway = graphene.Float()
+    combined = graphene.Float()
 
 
 class Body(graphene.ObjectType):
@@ -277,13 +298,12 @@ class Body(graphene.ObjectType):
     unladenWeight = graphene.Float()
     grossWeight = graphene.Float()
     maxLoad = graphene.Float()
-    fuelTank = graphene.Float()
-    trunkCapacity = graphene.Float()
 
 
 class Transmission(graphene.ObjectType):
-    drivetrain = graphene.Field(lambda : TransmissionDriveTrain)
+    driveTrain = graphene.Field(lambda : TransmissionDriveTrain)
     type = graphene.Field(lambda : TransmissionType)
+    speedLevel = graphene.Int()
 
 
 class Engine(graphene.ObjectType):
@@ -337,7 +357,7 @@ class Door(graphene.ObjectType):
     hasHandsFree = graphene.Boolean()
     hasHeightAdjustability = graphene.Boolean()
     isPanoramic = graphene.Boolean()
-    curtains = graphene.List(lambda : WindowCurtain)
+    curtain = graphene.Field(lambda : WindowCurtain)
 
 
 class WindowCurtain(graphene.ObjectType):
@@ -428,6 +448,7 @@ class Safety(graphene.ObjectType):
 
 class Light(graphene.ObjectType):
     headLight = graphene.Field(lambda : LightType)
+    hasAutomaticHeadLight = graphene.Boolean()
     hasHeadLightClean = graphene.Boolean()
     fogLight = graphene.Field(lambda : LightType)
     daytimeRuningLight = graphene.Field(lambda : LightType)
@@ -449,6 +470,20 @@ class CarPricing(graphene.ObjectType):
     price = graphene.Float()
     rollingPrice = graphene.Float()
     transmission = graphene.Field(lambda : Transmission)
+
+
+class CarPricingUpdate(graphene.ObjectType):
+    fullname = graphene.String()
+    year = graphene.Int()
+    price = graphene.Int()
+    source = graphene.Field(lambda: Source)
+    updatedDate = graphene.String()
+
+
+class CarSimilar(graphene.ObjectType):
+    car1_id = graphene.Int()
+    car2_id = graphene.Int()
+    weight = graphene.Float()
 
 
 class Definitions(graphene.ObjectType):

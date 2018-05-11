@@ -254,12 +254,15 @@ class Model(graphene.ObjectType):
     year = graphene.Int()
     cover = graphene.Field(lambda : Source)
     avatar = graphene.Field(lambda : Source)
+
+    images = graphene.List(lambda : Source) # interior, exterior, engine images
+
     series = graphene.Field(lambda : Series)
     transmission = graphene.Field(lambda : Transmission)
     engine = graphene.Field(lambda : Engine)
     colors = graphene.List(lambda : Color)
-    tire = graphene.Field(lambda : Tire)
-    wheel = graphene.Field(lambda : Wheel)
+    tires = graphene.Field(lambda : Tire)
+    wheels = graphene.Field(lambda : Wheel)
     madeIn = graphene.Field(lambda : Place)
     doors = graphene.List(lambda : Door)
     numberOfDoors = graphene.Int()

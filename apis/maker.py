@@ -1,5 +1,7 @@
 import graphene
-from graphql_models import Maker
+from graphql_models import *
+import adapters.aurora as a
+import json
 
 
 class MakerAPI(graphene.ObjectType):
@@ -47,14 +49,57 @@ class MakerAPI(graphene.ObjectType):
 
     def resolve_maker(self, info, brand):
 
-        cache = info.context.cache
+        # cache = info.context.cache
+        #
+        # prefix = 'maker-'
+        # key = '%s%s' % (prefix, brand)
+        #
+        # # cache.delete(key)
+        #
+        # def f(x):
+        #     return info.context.storage.get('makers', x[len(prefix):])
+        #
+        # return cache.get(key, ex=3600, callback=f) if cache else f(key)
 
-        prefix = 'maker-'
-        key = '%s%s' % (prefix, brand)
+        session = info.context.session
+        # session()
 
-        # cache.delete(key)
+        try:
+            maker = session.query(a.Maker).filter(
+                a.Maker.brand == brand
+            ).first()
 
-        def f(x):
-            return info.context.storage.get('makers', x[len(prefix):])
+            if not maker: return None
 
-        return cache.get(key, ex=3600, callback=f) if cache else f(brand)
+            sales = session.query(a.Sales).filter(
+                a.Sales.name == brand
+            )
+        except:
+            session.rollback()
+
+        # session.remove()
+
+        return Maker(
+            brand=maker.brand,
+            name=maker.name,
+            nativeName=maker.native_name,
+            found=maker.found,
+            founder=[People(name=v) for v in json.loads(maker.founder)],
+            revenue=maker.revenue,
+            netIncome=maker.net_income,
+            description=maker.description,
+            shareholders=[Organization(name=v[0], share='%s%%' % v[1]) for v in json.loads(maker.shareholders)],
+            divisions=[Organization(name=v) for v in json.loads(maker.divisions)],
+            subsidiaries=maker.subsidiaries,
+            website=Source(url=maker.website),
+            logo=Source(url=maker.logo),
+            image=Source(
+                url=maker.image,
+                description=maker.image_description
+            ),
+            sales=[Sales(
+                year=sale.date.year,
+                units=sale.units,
+                rank=sale.rank
+            ) for sale in sales]
+        )

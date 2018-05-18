@@ -1,3 +1,5 @@
 graphene>=2.0
 gremlinpython
 redis
+sqlalchemy
+pymysql

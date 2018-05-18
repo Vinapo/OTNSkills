@@ -161,17 +161,18 @@ class Storage(object):
     }
 
     def get(self, domain, key):
-        if not key: return None
-        if not self.db.get(domain):
-            if domain == 'makers':
-                self.db[domain] = load_makers()
-            elif domain == 'pricing':
-                self.db[domain] = load_car_pricing()
-            elif domain == 'definitions':
-                self.db[domain] = load_definitions()
-            elif domain == 'models':
-                makers = self.db.get('makers')
-                if not makers:
-                    self.db['makers'] = load_makers()
-                self.db[domain] = load_models(makers)
-        return self.db[domain].get(key.lower())
+        # if not key: return None
+        # if not self.db.get(domain):
+        #     if domain == 'makers':
+        #         self.db[domain] = load_makers()
+        #     elif domain == 'pricing':
+        #         self.db[domain] = load_car_pricing()
+        #     elif domain == 'definitions':
+        #         self.db[domain] = load_definitions()
+        #     elif domain == 'models':
+        #         makers = self.db.get('makers')
+        #         if not makers:
+        #             self.db['makers'] = load_makers()
+        #         self.db[domain] = load_models(makers)
+        # return self.db[domain].get(key.lower())
+        return None

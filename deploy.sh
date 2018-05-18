@@ -13,6 +13,7 @@ if [ -d packages ]; then
 	cp ../data/* data
 	cp ../production.ini .
 	find . -name "tests.py" -delete
+	find . -name "importer.py" -delete
 	find . -name "app.py" -delete
 	find . -name "*.pyc" -delete
 	find . -name "*.egg-info" | xargs rm -rf

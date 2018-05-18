@@ -8,6 +8,7 @@ import importlib
 from loader import Storage
 import ConfigParser, os
 from adapters.elasticache import ElastiCache
+from adapters.aurora import scoped_session, create_session
 
 
 class QueryAPIContext(object):
@@ -28,6 +29,8 @@ class QueryAPIContext(object):
             )
         else:
             self.cache = {}
+
+        self.session = scoped_session(create_session(host=self.settings.get('app:main', 'aws.aurora')))
 
 
 class GraphQLManager(object):
@@ -65,8 +68,9 @@ class GraphQLManager(object):
 
         # print(query, variables)
 
+        self.context.session()
         result = self.scheme.execute(query,
                                      variable_values=variables,
                                      context_value=self.context)
-
+        self.context.session.remove()
         return result.data

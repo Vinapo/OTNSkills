@@ -12,7 +12,7 @@ def get_enum_value(cls, name):
     for k in d.keys():
         if k[0] != '_' and k:
             v = getattr(cls, k)
-            if k.lower() == name.lower() or v.__dict__.get('_value_') == name:
+            if name and k.lower() == name.lower() or v.__dict__.get('_value_') == name:
                 return v.value
     return None
 
@@ -359,6 +359,7 @@ class Door(graphene.ObjectType):
     hasPower = graphene.Boolean()
     hasHandsFree = graphene.Boolean()
     hasHeightAdjustability = graphene.Boolean()
+    isSunRoof = graphene.Boolean()
     isPanoramic = graphene.Boolean()
     curtain = graphene.Field(lambda : WindowCurtain)
 

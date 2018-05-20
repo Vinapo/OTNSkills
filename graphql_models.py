@@ -134,7 +134,7 @@ class LightType(graphene.Enum):
     Projector = 5
     Laser = 6
 
-class DrivingModeType(graphene.Enum):
+class DriveModeType(graphene.Enum):
     Normal = 1
     Eco = 2
     Sport = 3
@@ -246,8 +246,10 @@ class Series(graphene.ObjectType):
 
 
 class Model(graphene.ObjectType):
-    name = graphene.String()
+
     id = graphene.Int()
+
+    name = graphene.String()
     trim = graphene.String()
     fullname = graphene.String()
     description = graphene.String()
@@ -261,8 +263,8 @@ class Model(graphene.ObjectType):
     transmission = graphene.Field(lambda : Transmission)
     engine = graphene.Field(lambda : Engine)
     colors = graphene.List(lambda : Color)
-    tires = graphene.Field(lambda : Tire)
-    wheels = graphene.Field(lambda : Wheel)
+    tire = graphene.Field(lambda : Tire)
+    wheel = graphene.Field(lambda : Wheel)
     madeIn = graphene.Field(lambda : Place)
     doors = graphene.List(lambda : Door)
     numberOfDoors = graphene.Int()
@@ -274,14 +276,9 @@ class Model(graphene.ObjectType):
     entertainment = graphene.Field(lambda : EntertainmentAndComfort)
     lights = graphene.Field(lambda : Light)
     mirrors = graphene.Field(lambda : Mirror)
-    fuelTank = graphene.Float()
-    trunkCapacity = graphene.Float()
-    drivingAssistant = graphene.Field(lambda : DrivingAssistant)
     safety = graphene.Field(lambda : Safety)
-    drivingMode = graphene.List(lambda : DrivingModeType)
-    fuelConsumption = graphene.Field(lambda : FuelConsumption)
-    luggageCompartmentVolume = graphene.Float()
-    price = graphene.Float()
+    drive = graphene.Field(lambda : Drive)
+
 
 class FuelConsumption(graphene.ObjectType):
     city = graphene.Float()
@@ -301,10 +298,13 @@ class Body(graphene.ObjectType):
     unladenWeight = graphene.Float()
     grossWeight = graphene.Float()
     maxLoad = graphene.Float()
+    fuelTank = graphene.Float()
+    trunkCapacity = graphene.Float()
+    luggageCompartmentVolume = graphene.Float()
 
 
 class Transmission(graphene.ObjectType):
-    driveTrain = graphene.Field(lambda : TransmissionDriveTrain)
+    drivetrain = graphene.Field(lambda : TransmissionDriveTrain)
     type = graphene.Field(lambda : TransmissionType)
     speedLevel = graphene.Int()
 
@@ -325,6 +325,8 @@ class Engine(graphene.ObjectType):
     numberOfCylinders = graphene.Int()
 
     hasStartStopButton = graphene.Boolean()
+
+    fuelConsumption = graphene.Field(lambda : FuelConsumption)
 
 
 class ChassisAndSuspensions(graphene.ObjectType):
@@ -415,7 +417,9 @@ class EntertainmentAndComfort(graphene.ObjectType):
     rearScreen = graphene.Boolean()
 
 
-class DrivingAssistant(graphene.ObjectType):
+class Drive(graphene.ObjectType):
+    mode = graphene.List(lambda : DriveModeType)
+
     frontCamera = graphene.Field(lambda : CameraType)
     rearCamera = graphene.Field(lambda : CameraType)
 
